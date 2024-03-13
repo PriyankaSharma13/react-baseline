@@ -8,7 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
     return (
-        <Box bgcolor="#5F9EA0" color="#fff" py={4}>
+        <Box   bgcolor={"#90dbf4"} color="#fff" py={4}>
             <Container maxWidth="xl">
                 <Grid container spacing={4} justifyContent="space-between">
 
@@ -29,7 +29,7 @@ const Footer = () => {
 
                     {/* ------------------ Middle Section --------------- */}
                     <Grid item xs={12} md={3} textAlign={"center"}>
-                        <Typography variant="h2" sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
+                        <Typography variant="h2" sx={{ color: "black", fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                             Company
                         </Typography>
                         <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
@@ -45,7 +45,7 @@ const Footer = () => {
 
                     {/* ------------- Programs Section ---------------- */}
                     <Grid item xs={12} md={3} textAlign={"center"}>
-                        <Typography variant="h2" sx={{ color: "#FFFFFF", fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
+                        <Typography variant="h2" sx={{ color: "black", fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                             Programs
                         </Typography>
                         <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
@@ -68,7 +68,7 @@ const Footer = () => {
                     {/* ------------Right Section ------------------ */}
                     <Grid item xs={12} md={3} textAlign={"center"}>
                         <Box textAlign={{ xs: 'center', md: 'right' }}>
-                            <Typography variant="h2" sx={{ fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
+                            <Typography variant="h2" sx={{color: "black", fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                                 Connect with us
                             </Typography>
                             <Box sx={{ fontSize: "18px", mb: 2 }}>
@@ -97,7 +97,7 @@ const Footer = () => {
 
                 {/* ---------------Copyright Section--------------------- */}
                 <Grid container mt={4}>
-                    <Typography variant="body2">
+                    <Typography variant="body2" sx={{color: "black",}}>
                     © 2023 Baseline IT Development
                     </Typography>
                 </Grid>

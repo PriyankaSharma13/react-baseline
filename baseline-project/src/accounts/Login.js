@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Avatar, Box, Button, Container, CssBaseline, TextField, Typography } from '@mui/material';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+// import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 
 const Login = () => {
@@ -40,9 +40,9 @@ const Login = () => {
     }}>
       <CssBaseline />
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: "sans-serif" }}>
-        <Avatar sx={{ m: 2, bgcolor: '#5F9EA0', width: 50, height: 50 }}>
+        {/* <Avatar sx={{ m: 2, bgcolor: '#5F9EA0', width: 50, height: 50 }}>
           <LockOutlinedIcon />
-        </Avatar>
+        </Avatar> */}
         <Typography component="h1" variant="h5" sx={{ fontFamily: "sans-serif", fontSize: "20px", fontWeight: 700 }}>
           Sign In
         </Typography>

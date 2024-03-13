@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Avatar, Box, Button, Container, CssBaseline, TextField, Typography } from '@mui/material';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+// import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import axios from 'axios';
 
 const Register = () => {
@@ -26,19 +26,18 @@ const Register = () => {
                 .min(6, 'Password must be at least 6 characters'),
         }),
         onSubmit: async (values) => {
-            // try {
-            //     await axios.post("http://localhost:4000/user/register", {
-            //         name: `${values.firstName} ${values.lastName}`,
-            //         email: values.email,
-            //         password: values.password,
-            //         phone: values.phone,
-            //     });
-            // } catch (error) {
-            //     console.error("Error during registration:", error);
-            // }
+            try {
+                await axios.post("http://localhost:4000/user/register", {
+                    name: `${values.firstName} ${values.lastName}`,
+                    email: values.email,
+                    password: values.password,
+                    phone: values.phone,
+                });
+            } catch (error) {
+                console.error("Error during registration:", error);
+            }
         },
     });
-
     return (
         <Container component="main" maxWidth="sm" sx={{
             border: '1px solid #ddd',
@@ -53,9 +52,9 @@ const Register = () => {
         }}>
             <CssBaseline />
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', fontFamily: "sans-serif" }}>
-                <Avatar sx={{ m: 1, bgcolor: '#5F9EA0' }}>
+                {/* <Avatar sx={{ m: 1, bgcolor: '#5F9EA0' }}>
                     <LockOutlinedIcon />
-                </Avatar>
+                </Avatar> */}
                 <Typography component="h1" variant="h5"  sx={{fontFamily: "sans-serif", fontSize:"20px", fontWeight:700 }}>
                     Sign up
                 </Typography>

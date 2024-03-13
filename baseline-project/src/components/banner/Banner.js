@@ -3,6 +3,7 @@ import React from 'react'
 import Navbar from '../../common/navbar/Navbar'
 import OurServices from '../../contents/OurServices'
 import banner from "../../assets/banner.jpg"
+import { Particle } from '../particle/Particle'
 
 function Banner() {
   return (
@@ -11,6 +12,7 @@ function Banner() {
      <Navbar/>
 
      {/* ----------------Banner Section------------------ */}
+     <Particle />
      
          <Box className="bg-white p-4 md:p-12">
            <Container maxWidth="xl">
@@ -19,7 +21,7 @@ function Banner() {
                {/* ----------- Content Section ---------- */}
                <Grid item xs={12} md={4}>
                  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                   <Typography variant="h1" sx={{ fontSize: '24px', fontWeight: 'bold', fontFamily: "sans-serif", color: '#5F9EA0', mb: 2 }}>
+                   <Typography variant="h3" sx={{ fontWeight: 'bold', fontFamily: "-moz-initial", color: '#90dbf4', mb: 2 }}>
                      <span style={{ color: 'black' }}>Team</span> Of Professionals
                    </Typography>
                    <Typography variant="h2" sx={{ fontSize: '16px', fontFamily: "sans-serif", color: 'black', mb: 4 }}>
@@ -27,7 +29,7 @@ function Banner() {
                      the lives through intense solutions of technology. We invite clients, partners, and employees to join us for business development as well as career development. Our experts provide top-tier services in web development, designing, maintenance, support, testing, and optimization. 24/7 assistance, great support, and quality coding are in priority while working. Newcomers working here will be exposed to a variety of learning opportunities across projects and challenges, all of which are meant to bring out the best in them every day.
                    </Typography>
                    <Button variant="contained" className="text-white w-full md:w-[200px]" 
-                   sx={{ '&:hover': { backgroundColor: '#5F9EA0' } , backgroundColor:"#5F9EA0"}}>
+                   sx={{ '&:hover': { backgroundColor:"#90dbf4"} ,backgroundColor:"#90dbf4"}}>
                      View
                    </Button>
                  </Box>

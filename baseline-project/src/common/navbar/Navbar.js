@@ -1,22 +1,22 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import logo from "../../assets/logo1.png";
-import { Link, useNavigate } from 'react-router-dom';
-import { List, ListItem, ListItemText, Popover } from '@mui/material';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import logo from "../../assets/new-logo3.png";
+import { Link, useNavigate } from "react-router-dom";
+import { List, ListItem, ListItemText, Popover } from "@mui/material";
+import "./navbar.styles.css";
 
-const pages = ['Home', 'Dashboard', 'Services', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
+const pages = ["Home", "Dashboard", "Services", "Contact"];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const history = useNavigate();
@@ -40,7 +40,6 @@ function Navbar() {
     setAnchorElUser(null);
   };
 
-
   const handleOpenServicesMenu = (event) => {
     setAnchorElServices(event.currentTarget);
   };
@@ -51,15 +50,23 @@ function Navbar() {
 
   const handleServiceClick = (service) => {
     handleCloseServicesMenu();
+    if (service === "Web Development") {
+      history("/webdevelopment");
+    } else if (service === "Web Designing") {
+      history("/webdesigning");
+    } else if (service === "Digital Marketing") {
+      history("/digitalmarketing");
+    } else if (service === "SEO") {
+      history("/seo");
+    }
   };
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#5F9EA0', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)' }} >
-        <Container maxWidth="xl">
+      <AppBar className="navbar">
+        <Container className="navbar-container">
           <Toolbar disableGutters>
-
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 onClick={handleOpenNavMenu}
@@ -86,26 +93,44 @@ function Navbar() {
               <img
                 src={logo}
                 alt="Logo"
-                sx={{ display: { xs: 'flex', md: 'none' } }}
+                className="logo-img"
               />
             </Box>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap: "20px" }}>
-              <Typography variant='body1'>
-                <Link to={"/home"} style={{ textDecoration: 'none', color: 'white' }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                gap: "20px",
+              }}
+            >
+              <Typography variant="body1">
+                <Link
+                  to={"/home"}
+                  className="nav-link"
+                >
                   Home
                 </Link>
               </Typography>
-              <Typography variant='body1'>
-                <Link to={"/about"} style={{ textDecoration: 'none', color: 'white' }}>
-                 About
+              <Typography variant="body1">
+                <Link
+                  to={"/about"}
+                  className="nav-link"
+                >
+                  About
                 </Link>
               </Typography>
-              <Typography variant='body1' onMouseEnter={handleOpenServicesMenu} style={{ color: 'white', cursor: 'pointer' }}>
+              <Typography
+                variant="body1"
+                onMouseEnter={handleOpenServicesMenu}
+              >
                 Services
               </Typography>
-              <Typography variant='body1'>
-                <Link to={"/contact"} style={{ textDecoration: 'none', color: 'white' }}>
+              <Typography variant="body1">
+                <Link
+                  to={"/contact"}
+                  className="nav-link"
+                >
                   Contact
                 </Link>
               </Typography>
@@ -115,30 +140,38 @@ function Navbar() {
                 open={Boolean(anchorElServices)}
                 onClose={handleCloseServicesMenu}
                 anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
+                  vertical: "bottom",
+                  horizontal: "left",
                 }}
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
+                  vertical: "top",
+                  horizontal: "left",
                 }}
                 sx={{ textAlign: "center" }}
               >
-                <List sx={{ width:"400px" }} >
-                  <ListItem button onClick={() => handleServiceClick("Web Development")}>
-                  
+                <List sx={{ width: "400px" }}>
+                  <ListItem
+                    button
+                    onClick={() => handleServiceClick("Web Development")}
+                  >
                     <ListItemText primary="Web Development" />
                   </ListItem>
-                  <ListItem button onClick={() => handleServiceClick("Web Designing")}>
+
+                  <ListItem
+                    button
+                    onClick={() => handleServiceClick("Web Designing")}
+                  >
                     <ListItemText primary="Web Designing" />
                   </ListItem>
-                  <ListItem button onClick={() => handleServiceClick("Digital Marketing")}>
+                  <ListItem
+                    button
+                    onClick={() => handleServiceClick("Digital Marketing")}
+                  >
                     <ListItemText primary="Digital Marketing" />
                   </ListItem>
                   <ListItem button onClick={() => handleServiceClick("SEO")}>
                     <ListItemText primary="SEO" />
                   </ListItem>
-                  
                 </List>
               </Popover>
             </Box>
@@ -146,7 +179,10 @@ function Navbar() {
             <Box>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="User Avatar" src="/dynamic/path/to/user-avatar.jpg" />
+                  <Avatar
+                    alt="User Avatar"
+                    src="/dynamic/path/to/user-avatar.jpg"
+                  />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -165,9 +201,7 @@ function Navbar() {
             </Box>
           </Toolbar>
         </Container>
-
       </AppBar>
-     
     </>
   );
 }

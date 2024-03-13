@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../components/footer/footer';
 import { Box, Card, CardContent, Container, Grid, Typography } from '@mui/material';
 import reactLogo from "../assets/react.png"
+
 function CardServices() {
   const cardData = [
     {
@@ -84,7 +85,7 @@ function CardServices() {
       </Container>
 
 
-      <Box mt={4}>
+      <Box mt={6}>
         <Footer />
       </Box>
     

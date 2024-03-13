@@ -6,11 +6,11 @@ const OurServices = () => {
     
     return (
         <>
-            <Box sx={{ textAlign: 'center', backgroundColor: "#bfd8d9" }}>
+            <Box sx={{ textAlign: 'center',}}>
                 <Box className=" p-4 md:p-12">
                     <Container maxWidth="xl">
                         <Box className="">
-                            <Typography variant='h2' sx={{ color: "#5F9EA0", }}>
+                            <Typography variant='h2' sx={{ color: "black", }}>
                                 Our Services
                             </Typography>
                             <Typography variant='body2' sx={{ fontSize: '18px', fontFamily: 'sans-serif', color: "black" }}>
