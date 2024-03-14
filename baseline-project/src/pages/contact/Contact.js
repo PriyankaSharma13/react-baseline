@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {Box,  Typography } from '@mui/material';
-import Navbar from '../common/navbar/Navbar';
-import Footer from './footer/footer';
+import Navbar from '../../common/navbar/Navbar';
+import Footer from '../../components/footer/footer';
 
 function Contact() {
   const [formData, setFormData] = useState({

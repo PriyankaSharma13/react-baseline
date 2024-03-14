@@ -31,7 +31,7 @@ function Frontend() {
 
   return (
     <Box>
-      <Box className="bg-white p-4 md:p-12">
+      <Box className=" p-4 md:p-12">
         <Container maxWidth="xl" mb={5}>
           <Grid container spacing={2} direction="column" alignItems="center">
             <Grid item xs={12}>

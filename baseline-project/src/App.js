@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './accounts/Login';
 import Register from './accounts/Register';
-import Contact from './components/Contact'; 
+import Contact from './pages/contact/Contact'; 
 import HomePage from './components/banner/Banner';
-import About from './components/About';
+import About from './pages/about/About';
 import Webdevelopment from './components/servicesinformation/webdevelopment/Webdevelopment'
 import {Particle} from './components/particle/Particle';
 

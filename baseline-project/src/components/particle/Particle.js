@@ -3,6 +3,8 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { loadPolygonMaskPlugin } from "tsparticles-plugin-polygon-mask";
 import { useCallback } from "react";
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
+
 
 export function Particle() {
   const particlesInit = useCallback(async (engine) => {
@@ -137,10 +139,33 @@ export function Particle() {
   } 
 
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="App" style={{ height: "100vh", display: 'grid', placeContent: 'center' }}>
+       <Box className="bg-white p-4 md:p-12 " >
+           <Container maxWidth="xl ">
+             <Grid container spacing={4} alignItems="center" justifyContent="space-between" >
+     
+               {/* ----------- Content Section ---------- */}
+               <Grid item xs={12} md={4}>
+                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', position:"relative", zIndex:1,}}>
+                   <Typography variant="h3" sx={{ fontWeight: 'bold', fontFamily: "-moz-initial", color: '#F1D625', mb: 2,zIndex:999 }}>
+                     <span style={{ color: "#fff" }}>Team</span> Of Professionals
+                   </Typography>
+                   <Typography variant="h2" sx={{ fontSize: '16px', fontFamily: "sans-serif", color: '#fff', mb: 4 ,zIndex:9999 }}>
+                     Baseline IT Development has a team of professionals with one mission of empowering 
+                     the lives through intense solutions of technology. We invite clients, partners, and employees to join us for business development as well as career development. Our experts provide top-tier services in web development, designing, maintenance, support, testing, and optimization. 24/7 assistance, great support, and quality coding are in priority while working. Newcomers working here will be exposed to a variety of learning opportunities across projects and challenges, all of which are meant to bring out the best in them every day.
+                   </Typography>
+                   <Button variant="contained" className="text-white w-full md:w-[200px]" 
+                   sx={{ '&:hover': { backgroundColor:"#F1D625"} ,backgroundColor:"#F1D625"}}>
+                     View
+                   </Button>
+                 </Box>
+               </Grid>
+               
+             </Grid>
+           </Container>
+         </Box>
       <Particles id="tsparticles" options={options} init={particlesInit} />
+
     </div>
   );
 }

@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import logo from "../../assets/new-logo3.png";
 import { Link, useNavigate } from "react-router-dom";
 import { List, ListItem, ListItemText, Popover } from "@mui/material";
-import "./navbar.styles.css";
+import "./navbar.css";
 
 const pages = ["Home", "Dashboard", "Services", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
