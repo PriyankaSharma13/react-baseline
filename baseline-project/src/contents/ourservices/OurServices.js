@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import React from 'react'
-import CardServices from './CardServices'
+import CardServices from '../cardservices/CardServices'
 
 const OurServices = () => {
     

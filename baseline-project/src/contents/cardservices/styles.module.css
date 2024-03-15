@@ -7,7 +7,7 @@
   --bg-color-blue: rgb(34, 193, 195);
 }
 
-.custom-card {
+.customCard {
   width: 330px;
   height: 400px;
   background: black;
@@ -24,7 +24,7 @@
   border: 1px solid var(--bg-color-blue);
 }
 
-.custom-card:hover {
+.customCard:hover {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -36,7 +36,7 @@
 }
 
 
-.custom-card .circle {
+.customCard .circle {
   border-radius: 50%;
   border: 2px solid transparent;
   display: flex;
@@ -47,23 +47,23 @@
   transition: all 0.3s ease-out;
 }
 
-.custom-card .circle:hover {
+.customCard .circle:hover {
   border-color: var(--bg-color-light);
 }
 
-.custom-card .circle:hover .overlay {
+.customCard .circle:hover .overlay {
   background: var(--bg-color-light);
 }
 
-.custom-card .circle:hover:after {
+.customCard .circle:hover:after {
   background: var(--bg-color);
 }
 
-.custom-card:hover p {
+.customCard:hover p {
   color: var(--text-color-hover);
 }
 
-.custom-card p {
+.customCard p {
   font-size: 18px;
   color: #fff;
   margin-top: 30px;

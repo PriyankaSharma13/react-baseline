@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../components/footer/footer";
+import Footer from "../../components/footer/footer";
 import {
   Box,
   Card,
@@ -8,13 +8,13 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import reactLogo from "../assets/react.png";
-import phplogo from "../assets/php.png";
-import digitallogo from "../assets/digital-marketing.png";
-import laravellogo from "../assets/laravel-framework-logo.png";
-import cartlogo from "../assets/shopping-bag.png";
-import weblogo from "../assets/web-article.png";
-import "../contents/styles.css";
+import reactLogo from "../../assets/react.png";
+import phplogo from "../../assets/php.png";
+import digitallogo from "../../assets/digital-marketing.png";
+import laravellogo from "../../assets/laravel-framework-logo.png";
+import cartlogo from "../../assets/shopping-bag.png";
+import weblogo from "../../assets/web-article.png";
+import styles from "../cardservices/styles.module.css"
 
 function CardServices() {
   const cardData = [
@@ -69,7 +69,7 @@ function CardServices() {
           {cardData.map((card) => (
             <Grid item xs={12} sm={6} md={4} key={card.id}>
               <Card
-                className="custom-card"
+                className={styles.customCard}
                 style={{ backgroundColor: 'black' }}
               >
                 <img
@@ -83,7 +83,7 @@ function CardServices() {
                   }}
                 />
                 <Box
-                  className="overlay"
+                  className={styles.overlay}
                   style={{ backgroundColor: card.bgColor }}
                 ></Box>
                 <CardContent style={{ flex: 1, textAlign: "center" }}>

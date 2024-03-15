@@ -1,0 +1,30 @@
+.footer{
+  
+    color: #fff;
+    padding: 25px;
+    z-index: 1;
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: black;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.navLink {
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF; 
+    text-decoration: none; 
+}
+
+.navLink::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #F1D625;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}

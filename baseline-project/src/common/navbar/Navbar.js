@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import logo from "../../assets/new-logo3.png";
 import { Link, useNavigate } from "react-router-dom";
 import { List, ListItem, ListItemText, Popover } from "@mui/material";
-import "./navbar.css";
+import styles from "./navbar.module.css";
 
 const pages = ["Home", "Dashboard", "Services", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -63,8 +63,8 @@ function Navbar() {
 
   return (
     <>
-      <AppBar className="navbar">
-        <Container className="navbar-container">
+      <AppBar className={styles.navbar}>
+        <Container className={styles.navbarContainer}>
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -107,7 +107,7 @@ function Navbar() {
               <Typography variant="body1">
                 <Link
                   to={"/home"}
-                  className="nav-link"
+                  className={styles.navLink}
                 >
                   Home
                 </Link>
@@ -115,7 +115,7 @@ function Navbar() {
               <Typography variant="body1">
                 <Link
                   to={"/about"}
-                  className="nav-link"
+                  className={styles.navLink}
                 >
                   About
                 </Link>
@@ -129,7 +129,7 @@ function Navbar() {
               <Typography variant="body1">
                 <Link
                   to={"/contact"}
-                  className="nav-link"
+                  className={styles.navLink}
                 >
                   Contact
                 </Link>

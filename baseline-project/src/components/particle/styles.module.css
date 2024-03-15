@@ -1,0 +1,56 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.particle-wrapper {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  font-size: 30px;
+  z-index: 999;
+}
+
+@keyframes changeText {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.textAnimation {
+  animation: changeText 12s infinite;
+}
+
+.textAnimation {
+  animation: changeText 12s infinite;
+}
+
+
+/* .changeword1{
+  color: aqua;
+  
+ 
+}
+.changeword2{
+  color: #F1D625;
+  
+ 
+}
+.changeword3{
+  color: "red";
+  
+ 
+} */
+
+.changeword {
+  color: #F1D625; 
+}
+

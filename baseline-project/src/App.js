@@ -5,8 +5,7 @@ import Register from './accounts/Register';
 import Contact from './pages/contact/Contact'; 
 import HomePage from './components/banner/Banner';
 import About from './pages/about/About';
-import Webdevelopment from './components/servicesinformation/webdevelopment/Webdevelopment'
-import {Particle} from './components/particle/Particle';
+import Webdevelopment from './pages/servicesinformation/webdevelopment/Webdevelopment';
 
 const App = () => {
   return (

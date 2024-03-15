@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Navbar from "../../common/navbar/Navbar";
-import OurServices from "../../contents/OurServices";
+import OurServices from "../../contents/ourservices/OurServices";
 import { Particle } from "../particle/Particle";
 
 function Banner() {

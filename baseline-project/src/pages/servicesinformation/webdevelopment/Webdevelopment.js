@@ -9,9 +9,9 @@ import {
 } from "@mui/material";
 import img from "../../../assets/images.jpg";
 import { Link } from "react-router-dom";
-import Footer from "../../footer/footer";
-import Frontend from "./Frontend";
-import Backend from "./Backend";
+import Frontend from "./frontendinfo/Frontend";
+import Backend from "./backendinfo/Backend";
+import Footer from "../../../components/footer/footer";
 
 const Webdevelopment = () => {
   return (
