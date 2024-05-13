@@ -1,11 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
 .navbar {
-width: 100%;
+/* width: 100%; */
 background:var(--black) !important;
+height: 80px;
 }
 .navbarContainer {
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 10px;
     z-index: 1;
     position: relative;
     backdrop-filter: blur(10px);

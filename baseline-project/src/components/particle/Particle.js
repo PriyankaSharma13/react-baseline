@@ -200,40 +200,7 @@ export function Particle() {
                      Team Of <Typewriter texts={["Developers", "Professionals", "Skillfulls"]} delay={200} infinite />
                   </Typography>
 
-                  {/* Subsequent words vertically with animation */}
-                  {/* <Typography
-                    variant="body1"
-                    className={styles.text}
-                    style={{ position: "relative", top: "-10px" }} // Adjust as needed
-                  >
-                    <span
-                      className={`${styles.changeword} ${styles.textAnimation}`}
-                      style={{
-                        display:
-                          currentWordIndex === 0 ? "inline-block" : "none",
-                      }}
-                    >
-                      Of Professionals
-                    </span>
-                    <span
-                      className={`${styles.changeword} ${styles.textAnimation}`}
-                      style={{
-                        display:
-                          currentWordIndex === 1 ? "inline-block" : "none",
-                      }}
-                    >
-                      Of Webdevelopment
-                    </span>
-                    <span
-                      className={`${styles.changeword} ${styles.textAnimation}`}
-                      style={{
-                        display:
-                          currentWordIndex === 2 ? "inline-block" : "none",
-                      }}
-                    >
-                      Of Designing
-                    </span>
-                  </Typography> */}
+                 
                 </Box>
                 <Typography
                   variant="h2"

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box, Container, Typography, Grid } from '@mui/material';
 
 function Frontend() {
   const frontendTechnologies = [
@@ -30,36 +29,30 @@ function Frontend() {
   ];
 
   return (
-    <Box>
-      <Box className=" p-4 md:p-12">
-        <Box maxWidth="xl" mb={5}>
-          <Grid container spacing={2} direction="column" alignItems="center">
-            <Grid item xs={12}>
-              <Typography variant="h1" align="center" sx={{ fontSize: "42px", fontWeight: 600, color: "#5F9EA0" }}>
-                Frontend Development
-              </Typography>
-              <Typography variant="body1" align="center" sx={{ fontSize: "20px", fontFamily: "sans-serif", color: 'white' }}>
-                The part of a website where the user interacts directly is termed as front end. It is also referred to as the ‘client side’ of the application.
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="h2" sx={{ fontSize: "24px", mb: 2, fontFamily: "-moz-initial", color: "#5F9EA0", fontWeight: 600 , textDecoration: "underline"}}>
-              Popular Frontend Technologies 
-              </Typography>
-              {frontendTechnologies.map((technology, index) => (
-                <Typography key={index} variant="body1" sx={{ fontFamily: "sans-serif", color: "white" }}>
-                  {technology.description ? (
-                    <strong style={{ color: "#5F9EA0" , textDecoration: "underline"}}>{technology.name}:</strong>
-                  ) : (
-                    <strong style={{ color: "#5F9EA0", fontWeight: 600 }}>{technology.name}</strong>
-                  )} {technology.description}
-                </Typography>
-              ))}
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-    </Box>
+    <div style={{ display: 'flex' , marginTop:"20px"}}>
+      <div style={{ flex: 1, padding: '20px' }}>
+        <h1 style={{ fontSize: '40px', fontWeight: 500, color: '#f1d625', textAlign: 'center' }}>Frontend Development</h1>
+        <p style={{ fontSize: '20px', fontFamily: 'sans-serif', color: 'white', textAlign: 'center' }}>
+          The part of a website where the user interacts directly is termed as front end. It is also referred to as the ‘client side’ of the application.
+        </p>
+
+       
+      </div>
+      <div style={{ flex: 1, backgroundColor: '#333', padding: '20px', borderRadius: '10px' }}>
+        <h2 style={{ fontSize: '24px', marginBottom: '10px', fontFamily: '-moz-initial', color: '#f1d625', fontWeight: 600, textDecoration: 'underline' }}>
+          Popular Frontend Technologies
+        </h2>
+        {frontendTechnologies.map((technology, index) => (
+          <p key={index} style={{ fontFamily: 'sans-serif', color: 'white' }}>
+            {technology.description ? (
+              <strong style={{ color: 'black', textDecoration: 'underline' }}>{technology.name}:</strong>
+            ) : (
+              <strong style={{ color: 'black', fontWeight: 600 }}>{technology.name}</strong>
+            )} {technology.description}
+          </p>
+        ))}
+      </div>
+    </div>
   );
 }
 

@@ -34,7 +34,7 @@ function Contact() {
 
   return (
     <>
-    <Box sx={{  }}>
+    <Box>
         <Navbar />
         <Box className="container mx-auto mt-8 mb-4">
           <Typography variant="h2" className="text-2xl font-bold mb-4">Contact Us</Typography>
