@@ -17,34 +17,132 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
+const frontendSkills = [
+  {
+    title: "javascript",
+    imgUrl: "https://i.ibb.co/BBdmT1T/javascript.png",
+    id: 1,
+  },
+  {
+    title: "react",
+    imgUrl: "https://i.ibb.co/RhRhpPx/react.png",
+    id: 2,
+  },
+  {
+    title: "framer",
+    imgUrl: "https://i.ibb.co/BstztVb/framer.png",
+    id: 3,
+  },
+  {
+    title: "sass",
+    imgUrl: "https://i.ibb.co/x7DH0yr/sass.png",
+    id: 4,
+  },
+  {
+    title: "vue",
+    imgUrl: "https://i.ibb.co/wYCXfJt/vuejs.png",
+    id: 5,
+  },
+  {
+    title: "typescript",
+    imgUrl: "https://i.ibb.co/4PmsWZQ/typescript.png",
+    id: 6,
+  },
+];
+
+const backendSkills = [
+  {
+    title: "php",
+    imgUrl: "https://i.ibb.co/kKgvPrc/php.png",
+    id: 1,
+  },
+  {
+    title: "mysql",
+    imgUrl: "https://i.ibb.co/fMgzkKT/mysql.png",
+    id: 2,
+  },
+  {
+    title: "laravel",
+    imgUrl: "https://i.ibb.co/Dg1CFxg/laravel-framework-logo.png",
+    id: 3,
+  },
+  {
+    title: "nodejs",
+    imgUrl: "https://i.ibb.co/r48pPS5/nodejs.png",
+    id: 4,
+  },
+  {
+    title: "rust",
+    imgUrl: "https://i.ibb.co/Y79fZHz/rust.png",
+    id: 5,
+  },
+  {
+    title: "typescript",
+    imgUrl: "https://i.ibb.co/4PmsWZQ/typescript.png",
+    id: 6,
+  },
+];
+const marketingSkills = [
+  {
+    title: "instagram",
+    imgUrl: "https://i.ibb.co/vxzLKBH/instagram-marketing.png",
+    id: 1,
+  },
+  {
+    title: "seo",
+    imgUrl: "https://i.ibb.co/8xXYq3M/seo-board.png",
+    id: 2,
+  },
+  {
+    title: "facebook",
+    imgUrl: "https://i.ibb.co/ZM2GbQN/social-media-facebook-marketing.png",
+    id: 3,
+  },
+  {
+    title: "youtube",
+    imgUrl: "https://i.ibb.co/9VdC3bS/social-media-marketing-in-mobile-online.png",
+    id: 4,
+  },
+  {
+    title: "twitter",
+    imgUrl: "https://i.ibb.co/723DHZF/twitter-marketing.png",
+    id: 5,
+  },
+  {
+    title: "whatsapp",
+    imgUrl: "https://i.ibb.co/vjk2yWQ/whatsapp-marketing.png",
+    id: 6,
+  },
+];
+
 const features = [
   {
-    name: "Analytics",
+    name: "Web Development",
     href: "#",
     description:
       "Get a better understanding of where your traffic is coming from.",
     icon: ChartBarIcon,
   },
   {
-    name: "Engagement",
+    name: "Web Designing",
     href: "#",
     description: "Speak directly to your customers in a more meaningful way.",
     icon: CursorClickIcon,
   },
   {
-    name: "Security",
+    name: "Digital Marketing",
     href: "#",
     description: "Your customers' data will be safe and secure.",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Integrations",
+    name: "SEO",
     href: "#",
     description: "Connect with third-party tools that you're already using.",
     icon: ViewGridIcon,
   },
   {
-    name: "Automations",
+    name: "UI/UX",
     href: "#",
     description:
       "Build strategic funnels that will drive your customers to convert",
@@ -98,7 +196,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function HeroPage() {
   return (
     <div className="relative bg-gray-50">
       <Popover className="relative bg-white">
@@ -112,12 +210,12 @@ export default function Example() {
                     <img
                       className="w-[120px] h-16"
                       src="https://i.ibb.co/3YnGc6x/new-logo1.png"
-                      alt=""
+                      alt="logo"
                     />
                   </a>
                 </div>
                 <div className="-mr-2 -my-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400">
                     <span className="sr-only">Open menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -154,7 +252,7 @@ export default function Example() {
                         >
                           <Popover.Panel
                             static
-                            className="absolute -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md px-0"
+                            className="absolute -ml-4 mt-3 transform z-10 w-screen max-w-md px-0"
                           >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                               <div className="relative grid bg-white px-5 py-6 gap-4 p-8">
@@ -179,7 +277,7 @@ export default function Example() {
                                   </a>
                                 ))}
                               </div>
-                              <div className="px-5 py-5 bg-gray-50 space-y-6 flex space-y-0 space-x-10 px-8">
+                              <div className="py-5 bg-gray-50 flex space-y-0 space-x-10 px-8">
                                 {callsToAction.map((item) => (
                                   <div key={item.name} className="flow-root">
                                     <a
@@ -246,7 +344,7 @@ export default function Example() {
                         >
                           <Popover.Panel
                             static
-                            className="absolute left-1/2 z-10 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md px-0"
+                            className="absolute left-1/2 z-10 transform -translate-x-1/2 mt-3 w-screen max-w-md px-0"
                           >
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                               <div className="relative grid bg-white px-5 py-6 gap-8 p-8">
@@ -314,6 +412,7 @@ export default function Example() {
                   <a
                     href="#"
                     className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                    style={{color: 'rgb(241, 214, 37)'}}
                   >
                     Sign in
                   </a>
@@ -343,23 +442,23 @@ export default function Example() {
                 className="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right"
               >
                 <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 h-[212px] w-[330px] overflow-y-scroll">
-                  <div className="pt-5 pb-6 px-5">
+                  <div className=" pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
                         <img
-                          className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                          className="h-18 w-[120px]"
+                          src="https://i.ibb.co/3YnGc6x/new-logo1.png"
                           alt="Workflow"
                         />
                       </div>
                       <div className="-mr-2">
-                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-yellow-400 focus:outline-none focus:ring-inset focus:ring-yellow-400">
                           <span className="sr-only">Close menu</span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
                       </div>
                     </div>
-                    <div className="mt-6">
+                    <div>
                       <nav className="grid gap-y-3">
                         {features.map((item) => (
                           <a
@@ -368,8 +467,9 @@ export default function Example() {
                             className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                           >
                             <item.icon
-                              className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                              className="flex-shrink-0 h-6 w-6"
                               aria-hidden="true"
+                              style={{color: 'rgb(241, 214, 37)'}}
                             />
                             <span className="ml-3 text-base font-medium text-gray-900">
                               {item.name}
@@ -407,7 +507,8 @@ export default function Example() {
                     <div>
                       <a
                         href="#"
-                        className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                        className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white"
+                        style={{background: 'rgb(241, 214, 37)'}}
                       >
                         Sign up
                       </a>
@@ -415,7 +516,8 @@ export default function Example() {
                         Existing customer?
                         <a
                           href="#"
-                          className="text-indigo-600 hover:text-indigo-500"
+                          className="hover:text-indigo-500"
+                          style={{color: 'rgb(241, 214, 37)'}}
                         >
                           Sign in
                         </a>
@@ -433,35 +535,68 @@ export default function Example() {
         <div className="mx-auto max-w-7xl w-full text-center">
           <div className="px-4">
             <h1 className="tracking-tight font-extrabold text-gray-900">
-              <span className="block text-indigo-600 text-lg font-bold">Who We Are</span>
+              <span className="block text-lg font-bold" style={{color: ' rgb(241, 214, 37)'}}>
+                Who We Are
+              </span>
             </h1>
-            <p className="mt-3 max-w-md mx-auto text-gray-500 text-xl">
+            <p className="mt-3 max-w-md mx-auto text-gray-500 text-sm">
               Welcome to Baseline IT Development, where we blend innovation and
               expertise to craft tailored digital solutions. From responsive web
               design to custom applications, we're here to bring your vision to
               life."
             </p>
-            <div className="mt-10 flex justify-center">
-              <div className="rounded-md shadow mt-0 ml-3">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Get started
-                </a>
+            <div>
+              <h2 className="mt-6 text-xl font-bold" style={{color: 'rgb(241, 214, 37)'}}>Our Frontend Stack</h2>
+              <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-5 mb-8">
+                {frontendSkills.map((item, index) => {
+                  return (
+                    <div
+                      className="rounded-md shadow-md mt-0 ml-3 p-4"
+                      key={item.id}
+                    >
+                      <img src={item.imgUrl} alt={item.title}/>
+                      <p className="uppercase mt-2">{item.title}</p>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="rounded-md shadow mt-0 ml-3">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
-                >
-                  Live demo
-                </a>
+            </div>
+            <div>
+              <h2 className="mt-6 text-xl" style={{color: 'rgb(241, 214, 37)'}}>Our Backend Stack</h2>
+              <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-5 mb-8">
+                {backendSkills.map((item, index) => {
+                  return (
+                    <div
+                      className="rounded-md shadow-md mt-0 ml-3 p-4"
+                      key={item.id}
+                    >
+                      <img src={item.imgUrl} alt={item.title} />
+                      <p className="uppercase mt-2">{item.title}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div>
+              <p>Apart from web designing and web development we also work on digital marketing and seo stuff</p>
+              <h2 className="mt-6 text-xl" style={{color: 'rgb(241, 214, 37)'}}>Our Digital Marketing Stack</h2>
+              <div className="mt-4 grid grid-cols-2 gap-x-2 gap-y-5 mb-8">
+                {marketingSkills.map((item, index) => {
+                  return (
+                    <div
+                      className="rounded-md shadow-md mt-0 ml-3 p-4"
+                      key={item.id}
+                    >
+                      <img src={item.imgUrl} alt={item.title} className="w-[90px] h-[90px]" />
+                      <p className="uppercase mt-2">{item.title}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
-        <div className="relative w-full h-64 h-72">
+        <div className="relative w-full h-72">
           <img
             className="absolute inset-0 w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"

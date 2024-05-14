@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Environment, useGLTF, ContactShadows, OrbitControls } from '@react-three/drei'
-import HeroPage from './Abouts'
+import HeroPage from '../../components/about/About'
 
 function Model(props) {
   const group = useRef()
