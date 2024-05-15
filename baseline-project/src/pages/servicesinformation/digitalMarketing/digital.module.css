@@ -1,0 +1,32 @@
+.main{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .containerHeading {
+    padding: 10px;
+  }
+  
+  .heading {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #f1d625;
+    margin-bottom: 10px;
+  }
+  
+  .whiteText {
+    color: #fff;
+  }
+  .subHeading {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+  }

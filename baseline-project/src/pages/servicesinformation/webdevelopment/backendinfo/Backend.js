@@ -21,13 +21,14 @@ function Backend() {
   ];
 
   return (
-    <div style={{ display: 'flex' , marginTop:"20px",}}>
+   
+      <div style={{ display: 'flex' , marginTop:"20px",marginBottom:"30px" }}>
       <div style={{ flex: 1, backgroundColor: '#333', padding: '20px', borderRadius: '10px' }}>
         <h2 style={{ fontSize: '24px', marginBottom: '10px', fontFamily: '-moz-initial', color: '#f1d625', fontWeight: 600, textDecoration: 'underline' }}>
           Popular Backend Technologies
         </h2>
         {backendTechnologies.map((technology, index) => (
-          <p key={index} style={{ fontFamily: 'sans-serif', color: 'white' }}>
+          <p key={index} style={{ fontFamily: 'sans-serif', color: 'white', marginBottom:"20px" }}>
             <strong style={{ color: 'black', textDecoration: 'underline' }}>{technology.name}:</strong> {technology.description}
           </p>
         ))}
@@ -38,8 +39,9 @@ function Backend() {
           Backend is the server side of a website. It is part of the website that users cannot see and interact with. It is the portion of software that does not come in direct contact with the users. It is used to store and arrange data.
         </p>
       </div>
+      </div>
       
-    </div>
+    
   );
 }
 
