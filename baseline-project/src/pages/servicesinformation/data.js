@@ -59,4 +59,38 @@ const cardItem = [
       },
 ];
 
-export { review, cardItem };
+
+// ---------------our Services Card items------------------
+const ServicesCardItems = [
+  {
+     id:"1",
+      title: "Search Engine Optimization ",
+      description:"Dominate search engine results and increase organic traffic with our strategic (SEO) Search Engine Optimization solutions. We employ proven techniques to improve your website's ranking and ensure maximum visibility."
+  },
+  {
+    id:"2",
+     title: "Pay-Per-Click Advertising",
+     description:" Drive immediate results and maximize your ROI with our targeted (PPC) Pay-Per-Click campaigns. Our experts create customized strategies to reach your audience and generate qualified leads."
+ },
+ {
+  id:"3",
+   title: "Social Media Marketing ",
+   description:"Engage with your audience and build brand awareness through effective social media marketing. We craft compelling content and leverage popular platforms to connect with your target demographic."
+},
+{
+  id:"4",
+   title: "Content Marketing",
+   description:"Establish authority and drive customer engagement with our content marketing services. From blog posts to infographics, we create valuable content that resonates with your audience and drives conversions."
+},
+{
+  id:"5",
+   title: "Email Marketing",
+   description:"Nurture leads and foster customer loyalty with our email marketing campaigns. We develop personalized strategies to deliver relevant content and drive action from your subscribers. Why Choose Baseline IT Development?"
+},
+{
+  id:"6",
+   title: "Experienced Professionals",
+   description:"Our team consists of experienced professionals with a proven track record of delivering exceptional results for our clients."
+},
+];
+export { review, cardItem ,ServicesCardItems};
