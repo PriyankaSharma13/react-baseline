@@ -6,7 +6,7 @@ import { useCallback, useState, useRef } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import Typewriter from "../animate-text/TextAnimate";
-import CustomButton from "../button/Button.tsx";
+import CustomButton from "../button/Button.js";
 
 export function Particle() {
   const particlesInit = useCallback(async (engine) => {

@@ -12,7 +12,7 @@ const WebDevelopment = () => {
     <>
       {/* Navbar */}
       <Navbar />
-      
+
       {/* Main Content */}
       <div style={{ marginTop: '80px', backgroundColor: "black" }}>
         <div style={{ backgroundColor: "black", margin: "0 auto", maxWidth: "1200px" }}>
@@ -21,7 +21,7 @@ const WebDevelopment = () => {
               {/* Text Content */}
               <div style={{ flex: 1, marginRight: '20px' }}>
                 <h2 className={styles.heading}>
-                <span className={styles.whiteText}>Best Web</span> Development Company In Mohali
+                  <span className={styles.whiteText}>Best Web</span> Development Company In Mohali
                 </h2>
                 <p className={styles.text}>
                   Web development services help create all types of web-based software and ensure a great experience for web users.
@@ -55,10 +55,14 @@ const WebDevelopment = () => {
             <Backend />
           </div>
         </div>
+
+        {/* Footer */}
+        <div >
+          <Footer />
+        </div>
+
       </div>
 
-      {/* Footer */}
-      <Footer />
     </>
   );
 };

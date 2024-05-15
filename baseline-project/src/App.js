@@ -7,6 +7,9 @@ import HomePage from './components/banner/Banner';
 import About from './pages/about/About';
 import Webdevelopment from './pages/servicesinformation/webdevelopment/Webdevelopment';
 import "./index.css"
+import WebDesigning from './pages/servicesinformation/webdesigning/webdesigning';
+import Digitalmarketing from './pages/servicesinformation/digitalMarketing/digitalmarketing';
+import SeoPage from './pages/servicesinformation/SEO/seo';
 
 const App = () => {
   return (
@@ -19,6 +22,10 @@ const App = () => {
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/webdevelopment" element={<Webdevelopment/>} />
+        <Route path="/webdesigning" element={<WebDesigning/>} />
+        <Route path="/digitalmarketing" element={<Digitalmarketing/>} />
+        <Route path="/seo" element={<SeoPage/>} />
+
       </Routes>
 
 
