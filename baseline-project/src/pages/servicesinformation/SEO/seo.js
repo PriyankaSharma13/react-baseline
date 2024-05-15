@@ -2,6 +2,8 @@ import React from 'react'
 import styles from "./seo.module.css";
 import Navbar from '../../../common/navbar/Navbar';
 import Footer from '../../../components/footer/footer';
+import CustomButton from '../../../components/button/Button';
+import seoImg from "../../../assets/servicesInfo/seo-search.png"
 
 const SeoPage =() => {
   return (
@@ -22,7 +24,12 @@ const SeoPage =() => {
                     past the first page of search engine results.
 
                     </h3>
+
+                    <div className={styles.buttonContainer}>
+                                <CustomButton text={"View"} />
+                            </div>
                 </div>
+                <img src={seoImg} className={styles.image} alt="SEO"/>
             </div>
         </div>
 
