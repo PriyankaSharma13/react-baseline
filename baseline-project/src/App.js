@@ -14,6 +14,9 @@ import Webdevelopment from "./pages/servicesinformation/webdevelopment/Webdevelo
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
 import { Earth } from "./components/earth/Earth";
+import WebDesigning from './pages/servicesinformation/webdesigning/webdesigning';
+import Digitalmarketing from './pages/servicesinformation/digitalMarketing/digitalmarketing';
+import SeoPage from './pages/servicesinformation/SEO/seo';
 
 const App = () => {
   return (
@@ -22,23 +25,23 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route
-          path="/contact"
-          element={
-            <Contact />
-            // <Canvas style={{width:'100vw', height: '100vh', background:'black'}}>
-            //   <Suspense fallback={null}>
-            //     <Earth />
-            //   </Suspense>
-            // </Canvas>
-          }
-        />
-        <Route path="/webdevelopment" element={<Webdevelopment />} />
+        <Route path="/home" element={<HomePage/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/webdevelopment" element={<Webdevelopment/>} />
+        <Route path="/webdesigning" element={<WebDesigning/>} />
+        <Route path="/digitalmarketing" element={<Digitalmarketing/>} />
+        <Route path="/seo" element={<SeoPage/>} />
+
       </Routes>
     </Router>
   );
 };
+
+        // <Canvas style={{width:'100vw', height: '100vh', background:'black'}}>
+            //   <Suspense fallback={null}>
+            //     <Earth />
+            //   </Suspense>
+            // </Canvas>
 
 export default App;

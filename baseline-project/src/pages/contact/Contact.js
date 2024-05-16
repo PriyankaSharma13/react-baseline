@@ -36,7 +36,7 @@ function Contact() {
     <>
     <Box>
         <Navbar />
-        <Box className="container mx-auto mt-8 mb-4">
+        <Box className="container mx-auto mt-12 mb-4">
           <Typography variant="h2" className="text-2xl font-bold mb-4">Contact Us</Typography>
           <form onSubmit={handleSubmit} className="space-y-4">
             <TextField

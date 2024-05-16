@@ -120,33 +120,4 @@ function CardServices() {
 
 export default CardServices;
 
-{
-  /* <Container>
-        <Grid container spacing={3}>
-          {cardData.map((card) => (
-            <Grid item xs={12} sm={6} md={4} key={card.id}>
-              <Card className={`custom-card education`}  >
-                <img
-                  src={card.image}
-                  alt={card.heading}
-                  style={{
-                    width: '80px',
-                    height: '90px',
-                    objectFit: 'cover',
-                    marginTop: '16px',
-                  }}
-                />
-                <CardContent style={{ flex: 1, textAlign: 'center' }}>
-                  <Typography variant="h6" component="div" sx={{ color: "black", fontSize: "20px", fontFamily: "sans-serif", fontWeight: "700", mb: 2 }}>
-                    {card.heading}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ fontSize: "16px", fontFamily: "sans-serif", fontWeight: "500" }}>
-                    {card.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container> */
-}
+

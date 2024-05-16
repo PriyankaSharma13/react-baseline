@@ -1,0 +1,180 @@
+/* web.module.css */
+.main{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .containerHeading {
+    padding: 10px;
+  }
+  
+  .heading {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #f1d625;
+    margin-bottom: 10px;
+  }
+  
+  .whiteText {
+    color: #fff;
+  }
+  
+  .subHeading {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .paragraph {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+.mainReview{
+    background-color: #333;
+   
+}
+.containerReview{
+        height: 80px;
+        background-color: #333;
+        margin: 0 auto;
+        max-width: 1200px;
+        border : 2px solid rgba(241, 214, 37, 0.75)
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    margin-right: 10px; 
+    display: inline-flex; 
+    align-items: center;
+}
+.reviewContent{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   
+}
+.reviewContent h1{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.whyChoose {
+    margin-top: 20px;
+    padding: 32px 0;
+    text-align: center;
+}
+
+.whyChoose h3 {
+    font-size: 24px;
+    margin-bottom: 32px;
+    font-weight: bold;
+    font-family: 'sans-serif';
+    color: #f1d625;
+}
+
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.col {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 0 0 calc(25% - 20px); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+    transition: all 0.3s ease;
+}
+
+.gr1 {
+    background: linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+}
+
+.gr2 {
+    background: linear-gradient(170deg, rgb(180, 236, 81) 0%, #429321 100%);
+}
+
+.gr3 {
+    background: linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
+}
+.gr4 {
+    background: linear-gradient(170deg, #C86DD7 0%, #c3f801 100%);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.moreLink {
+    text-decoration: none;
+  
+    text-align: left;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+.shortcontent {
+    background-color: #f1f1f1; 
+    padding: 20px;
+    border-radius: 8px; 
+    margin-bottom: 30px;
+    
+}
+
+.shortcontent h1 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: "black";
+    font-weight: 700;
+}
+
+.shortcontent p {
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: "black";
+    font-weight: 400;
+}
+.shortcontent span { 
+    color: "black";
+    font-weight: 700;
+}
+.link{
+    font-weight: bold; 
+    color: #007bff; 
+}

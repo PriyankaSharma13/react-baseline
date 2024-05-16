@@ -19,7 +19,7 @@
   position: relative;
   box-shadow: 0 4px 8px rgba(241, 214, 37, 0.2);
   text-decoration: none;
-  border: 1px solid rgb(241, 214, 37);
+  border: 1px solid #f1d625;
   transition: background 1s, transform 1s, color 1s; /* Added color to the transition */
 }
 
