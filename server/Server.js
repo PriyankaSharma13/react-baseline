@@ -1,8 +1,9 @@
 const express = require('express');
 const { default: mongoose } = require('mongoose');
-const userRoutes = require("./routes/userroutes");
+const userRoutes = require("./routes/userRoutes");
 const bodyParser = require('body-parser')
 const cors = require('cors')
+require('dotenv').config()
 const app = express();
 const port = 4000;
 
