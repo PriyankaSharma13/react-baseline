@@ -3,6 +3,7 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Environment, useGLTF, ContactShadows, OrbitControls } from '@react-three/drei'
 import HeroPage from '../../components/about/About'
+import Navbar from '../../common/navbar/Navbar'
 
 function Model(props) {
   const group = useRef()
@@ -45,16 +46,20 @@ function Model(props) {
 
 export default function About() {
   return (
-    <Canvas camera={{ position: [-5, 0, -15], fov: 55 }} style={{height: '100vh', background: 'grey'}}>
-      <pointLight position={[10, 10, 10]} intensity={1.5} />
-      <Suspense fallback={null}>
-        <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
-          <Model />
-        </group>
-        <Environment preset="city" />
-      </Suspense>
-      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
-      <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
-    </Canvas>
+   <div>
+     <Navbar/>
+     <Canvas camera={{ position: [-5, 0, -15], fov: 55 }} style={{height: '100vh', background: 'grey', marginTop:"30px"}}>
+   
+   <pointLight position={[10, 10, 10]} intensity={1.5} />
+   <Suspense fallback={null}>
+     <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
+       <Model />
+     </group>
+     <Environment preset="city" />
+   </Suspense>
+   <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
+   <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
+ </Canvas>
+   </div>
   )
 }
