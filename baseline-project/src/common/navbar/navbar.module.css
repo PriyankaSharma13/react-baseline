@@ -36,9 +36,44 @@ height: 80px;
         transform-origin: right;
         transform: scaleX(0);
         transition: transform .3s ease-in-out;
+        color:aliceblue;
+      
       }
   
   .navLink:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
+
+  .flexGrowResponsive {
+    flex-grow: 1;
+    display: flex;
+  }
+  
+  @media (min-width: 960px) { 
+    .flexGrowResponsive {
+      display: none;
+    }
+  }
+
+  .flexGrowNoneFlexMd {
+    flex-grow: 1;
+    display: none;
+    gap: 20px;
+  }
+  
+  @media (min-width: 960px) {
+    .flexGrowNoneFlexMd {
+      display: flex;
+    }
+  }
+.serviceText{
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+.PopoverContainer{
+ margin-top: 10px;
+}

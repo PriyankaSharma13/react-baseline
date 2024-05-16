@@ -93,4 +93,29 @@ const ServicesCardItems = [
    description:"Our team consists of experienced professionals with a proven track record of delivering exceptional results for our clients."
 },
 ];
-export { review, cardItem ,ServicesCardItems};
+
+
+const ShortCardDetails = [
+  {
+    id:"1",
+    title:"Brand Recognition",
+    description:"More customers will trust a website that has been optimized."
+  },
+  {
+    id:"1",
+    title:"Target Audience Matching",
+    description:"SEO matches user searches with your business niche by attracting customers via various platforms."
+  },
+  {
+    id:"1",
+    title:"Long-Term Cost Savings",
+    description:"SEO allows a company to maintain a healthy advertising budget by increasing organic website traffic."
+  },
+  {
+    id:"1",
+    title:"Unprecedented ROI",
+    description:"SEO has one of the highest ROIs of any marketing campaign."
+  },
+]
+
+export { review, cardItem ,ServicesCardItems ,ShortCardDetails};

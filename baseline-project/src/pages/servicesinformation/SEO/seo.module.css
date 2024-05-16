@@ -61,22 +61,84 @@
       font-size: 20px;
     
     }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .servicesContainer h1:hover ~.contentToShow {
-      animation: fadeIn 1s ease-out forwards;
-    }
-    
 .mainContainer{
   margin-top: 30px;
 }
     
+
+
+ /* --------------content  Container------- */
+.contentContainer{
+margin-top: 30px;
+}
+
+.contentHeading {
+  color: #f1d625;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 25px;
+  margin-top: 30px; 
+}
+
+.contentParagraph{
+  color: #fff;
+font-weight: bold;
+font-family: sans-serif;
+font-size: 18px;
+margin-top: 20px;
+
+}
+
+.contentSubParagraph{
+  color: #fff;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 18px;
+  
+  }
+
+/* --------------Short Card------- */
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center; 
+  padding: 20px;
+  margin-bottom: 30px;
+  
+}
+
+.shortCard {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s; 
+  width: 350px; 
+  text-align: center; 
+  border: 5px solid rgba(255, 216, 97, 1);
+}
+
+.shortCard:hover {
+  transform: translateY(-10px); 
+}
+
+.shortCardTitle {
+  margin: 0 0 10px 0;
+  color: #f1d625;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 24px;
+
+
+}
+
+.shortCardDesc {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+}

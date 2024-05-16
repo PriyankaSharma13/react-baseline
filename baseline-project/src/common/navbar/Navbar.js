@@ -134,47 +134,48 @@ function Navbar() {
                   Contact
                 </Link>
               </Typography>
-              <Popover
-                id="services-menu"
-                anchorEl={anchorElServices}
-                open={Boolean(anchorElServices)}
-                onClose={handleCloseServicesMenu}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                sx={{ textAlign: "center" }}
-              >
-                <List sx={{ width: "400px" }}>
-                  <ListItem
-                    button
-                    onClick={() => handleServiceClick("Web Development")}
-                  >
-                    <ListItemText primary="Web Development" />
-                  </ListItem>
 
-                  <ListItem
-                    button
-                    onClick={() => handleServiceClick("Web Designing")}
-                  >
-                    <ListItemText primary="Web Designing" />
-                  </ListItem>
-                  <ListItem
-                    button
-                    onClick={() => handleServiceClick("Digital Marketing")}
-                  >
-                    <ListItemText primary="Digital Marketing" />
-                  </ListItem>
-                  <ListItem button onClick={() => handleServiceClick("SEO")}>
-                    <ListItemText primary="SEO" />
-                  </ListItem>
-                </List>
-              </Popover>
             </Box>
+            <Popover
+              id="services-menu"
+              anchorEl={anchorElServices}
+              open={Boolean(anchorElServices)}
+              onClose={handleCloseServicesMenu}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              className={styles.PopoverContainer} 
+            >
+              <List sx={{ width: "600px",textAlign: "center",}}>
+                <ListItem
+                  button
+                  onClick={() => handleServiceClick("Web Development")}
+                >
+                  <ListItemText primary="Web Development"  className={styles.serviceText} />
+                </ListItem>
+
+                <ListItem
+                  button
+                  onClick={() => handleServiceClick("Web Designing") }
+                >
+                  <ListItemText primary="Web Designing" className={styles.serviceText}/>
+                </ListItem>
+                <ListItem
+                  button
+                  onClick={() => handleServiceClick("Digital Marketing")}
+                >
+                  <ListItemText primary="Digital Marketing" className={styles.serviceText}/>
+                </ListItem>
+                <ListItem button onClick={() => handleServiceClick("SEO")}>
+                  <ListItemText primary="SEO" className={styles.serviceText}/>
+                </ListItem>
+              </List>
+            </Popover>
 
             <Box>
               <Tooltip title="Open settings">

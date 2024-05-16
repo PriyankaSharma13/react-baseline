@@ -5,6 +5,7 @@ import Footer from '../../../components/footer/footer';
 import CustomButton from '../../../components/button/Button';
 import seoImg from "../../../assets/servicesInfo/seo-search.png"
 import CardDetails from './CardSeo/CardSeodetails';
+import { ShortCardDetails } from '../data';
 
 const SeoPage = () => {
     return (
@@ -51,6 +52,28 @@ const SeoPage = () => {
 
                     <div className={styles.mainContainer}>
                         <CardDetails />
+                    </div>
+
+
+                    {/* --------------content Container-------  */}
+                    <div className={styles.contentContainer}>
+                        <h1 className={styles.contentHeading}> Effective SEO Brings Customers To Your Website</h1>
+                        <p className={styles.contentParagraph}>When it comes to driving your website to be the best for your targeted audience,
+                            Baseline IT Development is in a league of its own. Since almost every user today prefers
+                            to visit websites that show up on the first page of search results, we are committed to doing
+                            everything possible to place your website right at the top. We ensure that your business never
+                            stops getting qualified leads by providing tangible SEO Services in Mohali.
+                        </p>
+                        <p className={styles.contentSubParagraph}>Here are some aspects of how effective SEO strategies can help you attract more customers to your website and build an unrivaled brand reputation:</p>
+
+                        <div className={styles.cardContainer}>
+                            {ShortCardDetails.map(card => (
+                                <div key={card.id} className={styles.shortCard}>
+                                    <h3 className={styles.shortCardTitle}>{card.title}</h3>
+                                    <p className={styles.shortCardDesc}>{card.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <Footer />

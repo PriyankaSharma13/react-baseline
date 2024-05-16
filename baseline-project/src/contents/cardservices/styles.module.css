@@ -5,6 +5,7 @@
   --text-color-hover: #4c5656;
   --box-shadow-color: rgba(255, 215, 97, 0.48);
   --bg-color-blue: rgb(34, 193, 195);
+  --text-color-white: #fff;
 }
 
 .customCard {
@@ -70,7 +71,7 @@
 }
 
 .customCard:hover p {
-  color: var(--text-color-hover);
+  color: var(--text-color-white);
 }
 
 .customCard p {
