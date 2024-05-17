@@ -23,6 +23,7 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElServices, setAnchorElServices] = React.useState(null);
+  const [servicesOpen, setServicesOpen] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -42,10 +43,12 @@ function Navbar() {
 
   const handleOpenServicesMenu = (event) => {
     setAnchorElServices(event.currentTarget);
+    setServicesOpen(true);
   };
 
   const handleCloseServicesMenu = () => {
     setAnchorElServices(null);
+    setServicesOpen(false);
   };
 
   const handleServiceClick = (service) => {
@@ -59,6 +62,10 @@ function Navbar() {
     } else if (service === "SEO") {
       history("/seo");
     }
+  };
+
+  const handleLogout = () => {
+    history('/login');
   };
 
   return (
@@ -93,7 +100,7 @@ function Navbar() {
               <img
                 src={logo}
                 alt="Logo"
-                className="logo-img"
+                className={`${styles.logoImg} ${styles.navLink}`}
               />
             </Box>
 
@@ -105,32 +112,29 @@ function Navbar() {
               }}
             >
               <Typography variant="body1">
-                <Link
-                  to={"/home"}
-                  className={styles.navLink}
-                >
+                <Link to="/home" className={styles.navLink}>
                   Home
                 </Link>
               </Typography>
               <Typography variant="body1">
-                <Link
-                  to={"/about"}
-                  className={styles.navLink}
-                >
+                <Link to="/about" className={styles.navLink}>
                   About
                 </Link>
               </Typography>
               <Typography
                 variant="body1"
+                className={styles.navLink}
                 onMouseEnter={handleOpenServicesMenu}
+                onMouseLeave={(e) => {
+                  if (!servicesOpen) {
+                    handleCloseServicesMenu();
+                  }
+                }}
               >
                 Services
               </Typography>
               <Typography variant="body1">
-                <Link
-                  to={"/contact"}
-                  className={styles.navLink}
-                >
+                <Link to="/contact" className={styles.navLink}>
                   Contact
                 </Link>
               </Typography>
@@ -146,18 +150,23 @@ function Navbar() {
                 horizontal: 'center',
               }}
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
-              className={styles.PopoverContainer} 
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => {
+                setServicesOpen(false);
+                handleCloseServicesMenu();
+              }}
+              className={styles.popoverContainer}
             >
               <List sx={{ width: "600px",textAlign: "center",}}>
-                <ListItem
-                  button
+                  <ListItem
+                    button
                   onClick={() => handleServiceClick("Web Development")}
-                >
+                  >
                   <ListItemText primary="Web Development"  className={styles.serviceText} />
-                </ListItem>
+                  </ListItem>
 
                 <ListItem
                   button
@@ -193,8 +202,8 @@ function Navbar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+               {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={setting === 'Logout' ? handleLogout : handleCloseUserMenu}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}

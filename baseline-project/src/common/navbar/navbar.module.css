@@ -49,31 +49,20 @@ height: 80px;
     flex-grow: 1;
     display: flex;
   }
-  
-  @media (min-width: 960px) { 
-    .flexGrowResponsive {
-      display: none;
-    }
-  }
 
-  .flexGrowNoneFlexMd {
-    flex-grow: 1;
-    display: none;
-    gap: 20px;
-  }
-  
-  @media (min-width: 960px) {
-    .flexGrowNoneFlexMd {
-      display: flex;
-    }
-  }
+
 .serviceText{
   text-align: center;
   font-weight: 600;
   font-size: 18px;
   color: #000;
-}
 
+}
+.serviceText :hover{
+  background-color: #f1d625;
+  padding: 8px;
+  color: white;
+}
 .PopoverContainer{
  margin-top: 10px;
 }

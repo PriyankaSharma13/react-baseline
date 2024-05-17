@@ -3,8 +3,10 @@ const User = require("../models/usermodels");
 var nodemailer = require("nodemailer");
 
 exports.registerUser = async (req, res) => {
+
   try {
-    const { email, password } = req.body;
+    const { email, password, } = req.body;
+    console.log(req.body, "req");
     const saltRounds = 10;
 
     const existingUser = await User.findOne({ email });
@@ -33,8 +35,10 @@ exports.registerUser = async (req, res) => {
 
         // Create a new user with the hashed password
         const newUser = new User({
+
           email,
           password: hashedPassword,
+
         });
 
         // Save the new user to the database
@@ -65,6 +69,7 @@ exports.loginUser = async (req, res) => {
     const { email, password } = req.body;
 
     const existingUser = await User.findOne({ email });
+    console.log('existingUser: ', existingUser);
     if (!existingUser) {
       return res
         .status(400)

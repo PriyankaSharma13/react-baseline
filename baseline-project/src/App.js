@@ -5,8 +5,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Login from "./accounts/Login";
-import Register from "./accounts/Register";
+import Login from "./accounts/LoginPage/Login";
+import Register from "./accounts/RegisterPage/Register";
 import Contact from "./pages/contact/Contact";
 import HomePage from "./components/banner/Banner";
 import About from "./pages/about/About";
