@@ -1,9 +1,13 @@
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .container {
-  background-color: black;
   display: flex;
   justify-content: space-between;
 }
-.heading{
+.heading {
   font-weight: bold;
   font-family: sans-serif;
   font-size: 35px;
@@ -11,7 +15,10 @@
   margin-bottom: 20px;
 }
 
-
+.leftContent {
+  flex: 1;
+  margin-right: 20px;
+}
 .whiteText {
   color: white;
 }
@@ -19,29 +26,30 @@
   font-size: 16px;
   font-family: sans-serif;
   color: white;
- 
+}
+
+.imageContainer{
+  flex: 1;
+   margin-Left: 20px;
+   text-Align: center
 }
 .image {
-  width: 100%; 
-  height: auto;
-  border-radius: 8px;
+  width: 100%;
 }
-.link{
+.link {
   color: white;
-
 }
-.container2{
+.container2 {
   margin-top: 20px;
 }
-.heading1{
+.heading1 {
   font-weight: bold;
   font-family: sans-serif;
   font-size: 20px;
   color: #f1d625;
   margin-bottom: 20px;
 }
-.text1{
-display: grid;
-gap:"10px"
-
+.text1 {
+  display: grid;
+  gap: "10px";
 }

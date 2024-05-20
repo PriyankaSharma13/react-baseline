@@ -17,6 +17,7 @@ import { Earth } from "./components/earth/Earth";
 import WebDesigning from './pages/servicesinformation/webdesigning/webdesigning';
 import Digitalmarketing from './pages/servicesinformation/digitalMarketing/digitalmarketing';
 import SeoPage from './pages/servicesinformation/SEO/seo';
+import ClientWork from "./pages/clientWork/client";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<HomePage/>} />
         <Route path="/about" element={<About/>} />
+        <Route path="/client" element={<ClientWork />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/webdevelopment" element={<Webdevelopment/>} />
         <Route path="/webdesigning" element={<WebDesigning/>} />

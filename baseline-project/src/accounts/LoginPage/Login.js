@@ -8,6 +8,8 @@ import welcome from "../../assets/welcome/wel.png";
 import styles from './login.module.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,22 +27,29 @@ const Login = () => {
         .min(6, 'Password must be at least 6 characters'),
     }),
     onSubmit: async (values) => {
+      if (formik.errors.email) {
+        toast.error(formik.errors.email);
+        return;
+      }
       try {
         const response = await axios.post("http://localhost:4000/user/login", values);
         if (response.status === 200) {
           navigate('/home');
         } else {
           setError(response.data.message);
+          toast.error(response.data.message);
         }
       } catch (error) {
         console.error('Login error:', error);
         setError('An error occurred during login');
+        toast.error('An error occurred during login');
       }
     },
   });
 
   return (
     <Box className={styles.mainContainer}>
+       <ToastContainer />
       <Container component="main" maxWidth="md" className={styles.container}>
         <Box className={styles.content}>
           <Box className={styles.formContainer}>

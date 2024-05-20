@@ -134,6 +134,11 @@ function Navbar() {
                 Services
               </Typography>
               <Typography variant="body1">
+                <Link to="/client" className={styles.navLink}>
+                  Client Work
+                </Link>
+              </Typography>
+              <Typography variant="body1">
                 <Link to="/contact" className={styles.navLink}>
                   Contact
                 </Link>

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import img from "../../../../assets/backend.png"
+import styles from "./style.module.css"
 function Backend() {
   const backendTechnologies = [
     {
@@ -21,27 +22,35 @@ function Backend() {
   ];
 
   return (
-   
-      <div style={{ display: 'flex' , marginTop:"20px",marginBottom:"30px" }}>
-      <div style={{ flex: 1, backgroundColor: '#333', padding: '20px', borderRadius: '10px' }}>
-        <h2 style={{ fontSize: '24px', marginBottom: '10px', fontFamily: '-moz-initial', color: '#f1d625', fontWeight: 600, textDecoration: 'underline' }}>
-          Popular Backend Technologies
-        </h2>
-        {backendTechnologies.map((technology, index) => (
-          <p key={index} style={{ fontFamily: 'sans-serif', color: 'white', marginBottom:"20px" }}>
-            <strong style={{ color: 'black', textDecoration: 'underline' }}>{technology.name}:</strong> {technology.description}
-          </p>
-        ))}
-      </div>
-      <div style={{ flex: 1, padding: '20px' }}>
-        <h1 style={{ fontSize: '40px', fontWeight: 500, color: '#f1d625', textAlign: 'center' }}>Backend Development</h1>
-        <p style={{ fontSize: '20px', fontFamily: 'sans-serif', color: 'white', textAlign: 'center' }}>
+    <div className={styles.backendContainer}>
+      <div className={styles.leftContent}>
+        <h1 className={styles.backendHeading}>Backend Development</h1>
+        <p className={styles.backendText}>
           Backend is the server side of a website. It is part of the website that users cannot see and interact with. It is the portion of software that does not come in direct contact with the users. It is used to store and arrange data.
         </p>
+        <div className={styles.imageContainer}>
+          <img src={img} alt="Backend" className={styles.backendImage} />
+        </div>
+
       </div>
+      <div className={styles.rightContainer}>
+        <h2 className={styles.heading}>
+          Popular Backend Technologies
+        </h2>
+        <div className={styles.cardContainer}>
+          {backendTechnologies.map((technology, index) => (
+            <div key={index} className={styles.cardDetails}>
+              <h3 className={styles.cardTitle}>{technology.name}</h3>
+              <p className={styles.cardDesc}>{technology.description}</p>
+            </div>
+          ))}
+
+        </div>
       </div>
-      
-    
+
+    </div>
+
+
   );
 }
 

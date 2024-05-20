@@ -1,0 +1,95 @@
+.backendContainer{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+    margin-bottom: 30px;
+}
+.leftContent{
+    padding: 10px;
+    text-align: center;
+}
+
+.backendHeading {
+    font-size: 40px;
+    font-weight: 500;
+    color: #f1d625;
+    text-align: center;
+  }
+  
+  .backendText {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+  }
+  
+
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .backendImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .rightContainer {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    margin-top: 20px;
+  }
+  
+  .heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f1d625;
+    font-weight: 600;
+    text-decoration: underline;
+    text-align: center;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .cardDetails {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+    border: 5px solid #f1d625;
+    background-color: #444;
+  }
+  
+  .cardDetails:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cardTitle {
+    margin: 0 0 10px 0;
+    color: #f1d625;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 24px;
+  }
+  
+  .cardDesc {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  

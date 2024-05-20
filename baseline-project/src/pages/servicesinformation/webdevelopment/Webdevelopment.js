@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../../common/navbar/Navbar";
-import img from "../../../assets/images.jpg";
+import img from "../../../assets/b-company.png";
 import Frontend from "./frontendinfo/Frontend";
 import Backend from "./backendinfo/Backend";
 import { Link } from "react-router-dom";
@@ -15,11 +15,10 @@ const WebDevelopment = () => {
 
       {/* Main Content */}
       <div style={{ marginTop: '80px', backgroundColor: "black" }}>
-        <div style={{ backgroundColor: "black", margin: "0 auto", maxWidth: "1200px" }}>
+        <div className={styles.main} >
           <div className={styles.container}>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
               {/* Text Content */}
-              <div style={{ flex: 1, marginRight: '20px' }}>
+              <div className={styles.leftContent}>
                 <h2 className={styles.heading}>
                   <span className={styles.whiteText}>Best Web</span> Development Company In Mohali
                 </h2>
@@ -32,10 +31,10 @@ const WebDevelopment = () => {
               </div>
 
               {/* Image */}
-              <div style={{ flex: 1, marginLeft: '20px', textAlign: 'center' }}>
+              <div className={styles.imageContainer} >
                 <img src={img} alt="images" className={styles.image} />
               </div>
-            </div>
+            
           </div>
 
           {/* Additional Information */}

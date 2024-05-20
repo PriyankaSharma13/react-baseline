@@ -7,6 +7,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import welcome from "../../assets/welcome/wel.png";
 import styles from "./register.module.css";
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -28,6 +31,10 @@ const Register = () => {
                 .min(6, 'Password must be at least 6 characters'),
         }),
         onSubmit: async (values) => {
+            if (formik.errors.email) {
+                toast.error(formik.errors.email);
+                return;
+            }
             try {
                 await axios.post("http://localhost:4000/user/register", {
                     firstName: values.firstName,
@@ -45,7 +52,8 @@ const Register = () => {
 
     return (
         <Box className={styles.mainContainer}>
-            <Container component="main" maxWidth="lg" className={styles.container}>
+            <ToastContainer />
+            <Container component="main" maxWidth="md" className={styles.container}>
                 <Box className={styles.content}>
                     <Box className={styles.formContainer}>
                         <Box className={styles.header}>
