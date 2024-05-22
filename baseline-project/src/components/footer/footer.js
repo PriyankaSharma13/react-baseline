@@ -34,13 +34,13 @@ const Footer = () => {
                             <Typography variant="h2" className={styles.navLink} sx={{ color: '#FFFFFF', fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                                 Company
                             </Typography>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            <Link href="/about" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
                                 About
                             </Link>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            <Link href="/webdevelopment" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
                                 Services
                             </Link>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            <Link href="/contact" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
                                 Contact Us
                             </Link>
                         </Box>
@@ -52,20 +52,17 @@ const Footer = () => {
                             <Typography variant="h2" className={styles.navLink} sx={{ color: '#FFFFFF', fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                                 Programs
                             </Typography>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            <Link href="/webdevelopment" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
                                 Web Development
                             </Link>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                                Market Research
+                            <Link href="/webdesigning" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            Web designing
                             </Link>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                                Online Support
-                            </Link>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            <Link href="/seo" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
                                 SEO services
                             </Link>
-                            <Link href="#" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                                Web designing
+                            <Link href="/digitalmarketing" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                            Digital Marketing
                             </Link>
                         </Box>
                     </Grid>

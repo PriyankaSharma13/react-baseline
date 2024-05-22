@@ -23,13 +23,12 @@
 .cardContainer {
     flex-wrap: wrap;
     justify-content: space-around;
-    display: flex;
-    
+    display: flex; 
 }
 
 
 .readMore {
-    color: yellowgreen;
+    color: yellow;
 }
 
 
@@ -48,7 +47,6 @@
    transform: rotate(45deg);
    margin-bottom: 90px;
    margin-top: 80px;
-   
 }
 
 .quoteFrame::before,
@@ -60,17 +58,23 @@
     left: -25px;
     right: 20px;
     bottom: 0;
-    border: 2px solid yellowgreen;
+    border: 2px solid rgb(255, 215, 97);
     pointer-events: none;
     transform: rotate(45deg);
 }
 
 .quoteFrame:hover {
-  background-color: yellowgreen;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgb(255, 215, 97) 95%
+    );
+    border: 2px solid rgb(255, 215, 97);
+    color: white;
 
 }
 .quoteFrame:hover .readMore {
-    color: #333 !important; 
+    color: black !important; 
     font-weight: 700;
 }
 .quoteText {

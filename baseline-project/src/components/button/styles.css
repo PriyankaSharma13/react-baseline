@@ -1,11 +1,11 @@
 
- ul {
+ .custom-btn {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-ul li {
+.custom-btn li {
   --c: rgb(241, 214, 37);
   color: var(--c);
   font-size: 16px;
@@ -26,7 +26,7 @@ ul li {
   cursor: pointer;
 }
 
-ul li span {
+.custom-btn li span {
   position: absolute;
   width: 25%;
   height: 100%;
@@ -39,26 +39,26 @@ ul li span {
   z-index: -1;
 }
 
-ul li:hover {
+.custom-btn li:hover {
   color: black;
 }
 
-ul li:hover span {
+.custom-btn li:hover span {
   transform: translateY(0) scale(2);
 }
 
-ul li span:nth-child(1) {
+.custom-btn li span:nth-child(1) {
   --n: 1;
 }
 
-ul li span:nth-child(2) {
+.custom-btn li span:nth-child(2) {
   --n: 2;
 }
 
-ul li span:nth-child(3) {
+.custom-btn li span:nth-child(3) {
   --n: 3;
 }
 
-ul li span:nth-child(4) {
+.custom-btn li span:nth-child(4) {
   --n: 4;
 }

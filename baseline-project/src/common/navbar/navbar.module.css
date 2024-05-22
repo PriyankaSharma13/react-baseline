@@ -1,68 +1,66 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
 .navbar {
-/* width: 100%; */
-background:var(--black) !important;
-height: 80px;
+  background: var(--black) !important;
+  height: 80px;
 }
+
 .navbarContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 10px;
-    z-index: 1;
-    position: relative;
-    backdrop-filter: blur(10px);
-    background: var(--grey) !important;
-    border-radius: 50px;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+  backdrop-filter: blur(10px);
+  background: var(--grey) !important;
+  border-radius: 50px;
+}
 
-  .navLink {
-    position: relative;
-  }
-  
+.navLink {
+  position: relative;
+}
+
 .navLink::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        border-radius: 4px;
-        background-color: var(--yellow);
-        bottom: -5px;
-        left: 0;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform .3s ease-in-out;
-        color:aliceblue;
-      
-      }
-  
-  .navLink:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--yellow);
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  color: aliceblue;
+}
 
-  .flexGrowResponsive {
-    flex-grow: 1;
-    display: flex;
-  }
+.navLink:hover::before {
+  transform: scaleX(1);
+}
+.flexGrowResponsive {
+  flex-grow: 1;
+  display: flex;
+}
 
-
-.serviceText{
+.serviceText {
   text-align: center;
   font-weight: 600;
   font-size: 18px;
   color: #000;
-
 }
-.serviceText :hover{
+
+/* .serviceText:hover {
   background-color: #f1d625;
   padding: 8px;
   color: white;
+} */
+
+.PopoverContainer {
+  margin-top: 10px;
 }
-.PopoverContainer{
- margin-top: 10px;
-}
+

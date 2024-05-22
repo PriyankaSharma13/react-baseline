@@ -20,6 +20,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
   const history = useNavigate();
+  const menuRef = React.useRef(null);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElServices, setAnchorElServices] = React.useState(null);
@@ -145,7 +146,7 @@ function Navbar() {
               </Typography>
 
             </Box>
-            <Popover
+            {/* <Popover
               id="services-menu"
               anchorEl={anchorElServices}
               open={Boolean(anchorElServices)}
@@ -189,7 +190,33 @@ function Navbar() {
                   <ListItemText primary="SEO" className={styles.serviceText}/>
                 </ListItem>
               </List>
-            </Popover>
+            </Popover> */}
+            <div
+              onMouseLeave={handleCloseServicesMenu}
+              style={{ position: 'relative', zIndex: 1 }} 
+            >
+              <Menu
+                ref={menuRef}
+                id="services-menu"
+                anchorEl={anchorElServices}
+                open={Boolean(anchorElServices)}
+                onClose={handleCloseServicesMenu}
+                MenuListProps={{
+                  'aria-labelledby': 'basic-button',
+                }}
+                className={styles.PopoverContainer}
+              >
+                {["Web Development", "Web Designing", "Digital Marketing", "SEO"].map(service => (
+                  <MenuItem
+                    key={service}
+                    onClick={() => handleServiceClick(service)}
+                    // sx={{  display: "block", margin: "auto" }}
+                  >
+                    <Typography className={styles.serviceText}>{service}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </div>
 
             <Box>
               <Tooltip title="Open settings">
@@ -207,7 +234,7 @@ function Navbar() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-               {settings.map((setting) => (
+                {settings.map((setting) => (
                   <MenuItem key={setting} onClick={setting === 'Logout' ? handleLogout : handleCloseUserMenu}>
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
