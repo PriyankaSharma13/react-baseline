@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Container, Grid, Typography, Link } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import logo from "../../assets/new-logo.png";
 import styles from "../footer/styles.module.css";
+import { marketingIcons, programSection } from './data';
+
+
 
 const Footer = () => {
     return (
@@ -20,7 +20,7 @@ const Footer = () => {
                                 alt="Logo"
                                 width={180}
                                 sx={{ display: 'block', margin: '0 auto', mb: 2 }}
-                               
+
                             />
                             <Typography variant="body2" sx={{ color: "#FFFFFF", fontSize: "16px", fontFamily: "sans-serif" }}>
                                 Baseline Development is a web services and solutions company with a dedicated development center in Mohali and a presence in the USA. We have been serving our global clients.
@@ -52,18 +52,11 @@ const Footer = () => {
                             <Typography variant="h2" className={styles.navLink} sx={{ color: '#FFFFFF', fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                                 Programs
                             </Typography>
-                            <Link href="/webdevelopment" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                                Web Development
-                            </Link>
-                            <Link href="/webdesigning" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                            Web designing
-                            </Link>
-                            <Link href="/seo" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                                SEO services
-                            </Link>
-                            <Link href="/digitalmarketing" color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
-                            Digital Marketing
-                            </Link>
+                            {programSection.map(service => (
+                                <Link key={service.id} href={service.href} color="inherit" underline="none" sx={{ display: 'block', color: '#FFFFFF', mb: 1 }}>
+                                    {service.title}
+                                </Link>
+                            ))}
                         </Box>
                     </Grid>
 
@@ -73,18 +66,14 @@ const Footer = () => {
                             <Typography variant="h2" className={styles.navLink} sx={{ color: '#FFFFFF', fontSize: "18px", fontFamily: "sans-serif", mb: 2 }}>
                                 Connect with us
                             </Typography>
-                            <Box sx={{ fontSize: "18px", mb: 2 }}>
-                                <Link href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener" sx={{ textDecoration: 'none', cursor: 'pointer', color: '#FFFFFF'}}>
-                                    <InstagramIcon />
-                                </Link>
-                                <Link href="https://www.whatsapp.com/download" target="_blank" rel="noopener" sx={{ textDecoration: 'none', cursor: 'pointer', color: '#FFFFFF'}}>
-                                    <WhatsAppIcon />
-                                </Link>
-                                <Link href="https://in.linkedin.com/" target="_blank" rel="noopener" sx={{ textDecoration: 'none', cursor: 'pointer', color: '#FFFFFF' }}>
-                                    <LinkedInIcon />
-                                </Link>
+                            <Box sx={{ mb: 2 }}>
+                                {marketingIcons.map(icon => (
+                                    <Link key={icon.id} href={icon.href} target="_blank" rel="noopener" sx={{    marginRight: "10px", textDecoration: 'none', cursor: 'pointer', color: '#FFFFFF' }}>
+                                        {React.createElement(icon.icon)}
+                                    </Link>
+                                ))}
                             </Box>
-                            <Typography variant="body2" sx={{ fontSize: "14px", fontFamily: "sans-serif", mb: 1, cursor: 'pointer', color: '#FFFFFF'}}>
+                            <Typography variant="body2" sx={{ fontSize: "14px", fontFamily: "sans-serif", mb: 1, cursor: 'pointer', color: '#FFFFFF' }}>
                                 Email: info@example.com
                             </Typography>
                             <Typography variant="body2" sx={{ fontSize: "14px", fontFamily: "sans-serif", cursor: 'pointer', color: '#FFFFFF' }}>
@@ -93,6 +82,7 @@ const Footer = () => {
                         </Box>
                     </Grid>
                 </Grid>
+
 
                 {/* ---------------Copyright Section--------------------- */}
                 <Grid container justifyContent="center" alignItems="center" mt={4} sx={{ borderTop: '1px solid rgba(255, 255, 255, 0.2)', paddingTop: 2 }}>

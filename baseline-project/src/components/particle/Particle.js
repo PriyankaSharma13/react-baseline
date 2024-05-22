@@ -7,6 +7,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import styles from "./styles.module.css";
 import Typewriter from "../animate-text/TextAnimate";
 import CustomButton from "../button/Button.js";
+import { Link } from "react-router-dom";
 
 export function Particle() {
   const particlesInit = useCallback(async (engine) => {
@@ -235,8 +236,7 @@ export function Particle() {
                 >
                   View
                 </Button> */}
-                <CustomButton text={"View"}/>
-
+                <Link to= {"/contact"}> <CustomButton text={"View"} /></Link>
               </Box>
             </Grid>
           </Grid>

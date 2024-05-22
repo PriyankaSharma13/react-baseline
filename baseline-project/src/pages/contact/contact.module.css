@@ -1,153 +1,172 @@
 .container {
-    margin-top: 80px;
-    background-color: black;
+  margin-top: 80px;
+  background-color: black;
     
-  }
-  
-  .fullWidthBox {
-    background-image: url("../../assets/clientImg/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 400px; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-end; 
-    align-items: center;
-    position: relative;
-    color: white;
-    text-align: center;
-  }
-  
-  .contentContainer {
-    font-size: 40px;
-    font-weight: 700;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    top: 50px; 
-  }
-  
-  .main {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 20px;
-  }
-  
-  .shortContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    position: absolute;
-    top: 280px;
-  }
-  
-  .mailContent {
-    width: 250px;
-    background-color: #fff;
-    padding: 18px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.5s, transform 0.5s, color 0.5s;
-    border-radius: 8px;
-  }
-  
-  .mailContent:hover {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(255, 216, 97, 1) 95%
-    );
-    transform: scale(1.06) translateZ(0);
-    border: 3px solid rgb(241, 214, 37);
-    color: white;
-  }
-  
-  .contentHeading {
-    font-size: 20px;
-    color: #333;
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  
-  .paragraph {
-    font-size: 16px;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-  
-  .formContainer {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; 
-    margin-bottom: 30px;
-  }
-  
-  .leftContainer {
-    width: 50%;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .rightContainer {
-    width: 50%;
-    padding: 40px;
-    box-sizing: border-box;
-  }
-  
-  .image {
-    width: 100%;
-    height: 530px;
-    object-fit: cover;
-  }
-  .formHeading{
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  .formGroup {
-    margin-bottom: 20px;
-  }
-  
-  .textField {
-    width: 100%;
-  }
-  
-  .submitButton {
-    margin-top: 20px;
-    width: 100%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(255, 216, 97, 1) 95%
-    );
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 10px 0;
-  }
-  
-  .submitButton:hover {
-    background: rgb(241, 214, 37);
-  }
-  
+}
+
+.fullWidthBox {
+  background-image: url("../../assets/clientImg/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end; 
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.contentContainer {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50px; 
+}
+
+.shortContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  position: absolute;
+  top: 280px;
+}
+
+.mailContent {
+  width: 250px;
+  background-color: #fff;
+  padding: 18px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s, transform 0.5s, color 0.5s;
+  border-radius: 8px;
+}
+
+.mailContent:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 216, 97, 1) 95%
+  );
+  transform: scale(1.06) translateZ(0);
+  border: 3px solid rgb(241, 214, 37);
+  color: white;
+}
+
+.icons{
+  filter: grayscale(100%);
+}
+
+.mailContent:hover .icons {
+  filter: inherit;
+}
+
+.contentHeading {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: #130101;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.mailContent:hover .contentHeading,
+.mailContent:hover .paragraph {
+  color: white;
+}
+
+
+  /* ---------form container----------- */
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.leftContainer {
+  width: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.rightContainer {
+  width: 50%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+.formGroup {
+  margin-bottom: 22px;
+}
+
+.textField {
+  width: 100%;
+}
+
+.submitButton {
+  margin-top: 20px;
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 216, 97, 1) 95%
+  );
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.submitButton:hover {
+  background: rgb(241, 214, 37);
+  background: linear-gradient(
+    90deg,
+    rgba(241, 214, 37, 1) 0%,
+    rgba(255, 216, 97, 1) 95%
+  );
+  color: black; 
+}

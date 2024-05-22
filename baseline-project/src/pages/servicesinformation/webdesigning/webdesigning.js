@@ -53,45 +53,44 @@ const WebDesigning = () => {
                         </div>
                     </div>
                     {/* </div> */}
-  
 
 
-              {/* -----------card Section --------------- */}
+
+                    {/* -----------card Section --------------- */}
                     <div className={styles.whyChoose}>
+                    <h1 >OUR SERVICES</h1>
                         <h3>Why Choose Baseline Web Tech for Your Web Development Needs</h3>
                         <div className={styles.cardContainer}>
-                                {cardItem.map((item, index) => (
-                                    <div key={index} className={styles.col}>
-                                        <div className={`${styles.card} ${item.gradientClass} ${styles.fullWidth}`}>
-                                                <h1 className={styles.title}>{item.title}</h1>
-                                                <p className={styles.description}>{item.description}</p>
-                                            
-                                            {/* <div className={styles.icoCard}>
-                                                <FontAwesomeIcon icon={item.iconClass} />
-                                            </div> */}
-                                            <Link to={"/learnmore"} className={styles.moreLink}>
-                                                <h1>more</h1>
-                                            </Link>
-                                        </div>
+                        {cardItem.map((item, index) => (
+                            <div key={index} className={styles.card}>
+                                <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80" className={styles.cardImage} alt="" />
+                                <div className={styles.cardOverlay}>
 
-
+                                    <div className={styles.cardHeaderText}>
+                                        <h3 className={styles.cardTitle}>{item.title}</h3>
+                                        <p className={styles.cardDescription}>{item.description}</p>
                                     </div>
-                                ))}
-                            
-                        </div>
+                                    <Link to={"/learnmore"} className={styles.moreLink}>
+                                            <h1>more</h1>
+                                        </Link>
+                                    
+                                </div>
+
+                            </div>
+                        ))}
+                    </div>
                     </div>
 
-      {/* --------Short content-------------- */}
+                    {/* --------Short content-------------- */}
                     <div className={styles.shortcontent}>
                         <div>
                             <h1>Let us collaborate!</h1>
-                           <p>Need a quote for a new web design or re-design project?</p>
-                         <p>Give our <span>web designing in Mohali </span> some information about your project and 
-                         <Link to={"/contact"} className={styles.link}> get started today!</Link></p>
+                            <p>Need a quote for a new web design or re-design project?</p>
+                            <p>Give our <span>web designing in Mohali </span> some information about your project and
+                                <Link to={"/contact"} className={styles.link}> get started today!</Link></p>
                         </div>
 
                     </div>
-
                 </div>
                 <Footer />
             </div>

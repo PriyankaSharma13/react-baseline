@@ -15,8 +15,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { List, ListItem, ListItemText, Popover } from "@mui/material";
 import styles from "./navbar.module.css";
 
-const pages = ["Home", "Dashboard", "Services", "Contact"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Home", "Dashboard", "Services","ClientWork" ,"Contact"];
+const settings = ["Profile", "Dashboard", "Logout"];
 
 function Navbar() {
   const history = useNavigate();

@@ -118,26 +118,26 @@ const marketingSkills = [
 const features = [
   {
     name: "Web Development",
-    href: "#",
+    href: "/webdevelopment",
     description:
       "Get a better understanding of where your traffic is coming from.",
     icon: ChartBarIcon,
   },
   {
     name: "Web Designing",
-    href: "#",
+    href: "/webdesigning",
     description: "Speak directly to your customers in a more meaningful way.",
     icon: CursorClickIcon,
   },
   {
     name: "Digital Marketing",
-    href: "#",
+    href:"/digitalmarketing",
     description: "Your customers' data will be safe and secure.",
     icon: ShieldCheckIcon,
   },
   {
     name: "SEO",
-    href: "#",
+    href:" /seo",
     description: "Connect with third-party tools that you're already using.",
     icon: ViewGridIcon,
   },
@@ -205,7 +205,7 @@ export default function HeroPage() {
             <div className="max-w-7xl mx-auto px-6 ">
               <div className="flex justify-between items-center py-2">
                 <div className="flex justify-start">
-                  <a href="#">
+                  <a href="/">
                     <span className="sr-only">Workflow</span>
                     <img
                       className="w-[120px] h-16"
@@ -410,14 +410,14 @@ export default function HeroPage() {
                 </Popover.Group>
                 <div className="hidden items-center justify-end">
                   <a
-                    href="#"
+                    href="/login"
                     className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
                     style={{color: 'rgb(241, 214, 37)'}}
                   >
                     Sign in
                   </a>
                   <a
-                    href="#"
+                    href="/register"
                     className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                   >
                     Sign up
@@ -506,7 +506,7 @@ export default function HeroPage() {
                     </div>
                     <div>
                       <a
-                        href="#"
+                        href="/register"
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white"
                         style={{background: 'rgb(241, 214, 37)'}}
                       >
@@ -515,7 +515,7 @@ export default function HeroPage() {
                       <p className="mt-6 text-center text-base font-medium text-gray-500">
                         Existing customer?
                         <a
-                          href="#"
+                          href="/login"
                           className="hover:text-indigo-500"
                           style={{color: 'rgb(241, 214, 37)'}}
                         >
