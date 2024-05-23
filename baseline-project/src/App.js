@@ -40,10 +40,5 @@ const App = () => {
   );
 };
 
-        // <Canvas style={{width:'100vw', height: '100vh', background:'black'}}>
-            //   <Suspense fallback={null}>
-            //     <Earth />
-            //   </Suspense>
-            // </Canvas>
 
 export default App;

@@ -1,10 +1,9 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
@@ -12,30 +11,66 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../../assets/new-logo3.png";
 import { Link, useNavigate } from "react-router-dom";
-import { List, ListItem, ListItemText, Popover } from "@mui/material";
 import styles from "./navbar.module.css";
+import Avatar2 from "../../assets/clientImg/avatar.png";
+import DrawerNavigation from "./drawer/drawer";
+import { Menu } from "@mui/material";
 
-const pages = ["Home", "Dashboard", "Services","ClientWork" ,"Contact"];
+const pages = [
+  {
+    href: "/",
+    title: "Home",
+    id: "1"
+  },
+  {
+    href: "/client",
+    title: "Client Work",
+    id: "3"
+  },
+  {
+    href: "/contact",
+    title: "Contact",
+    id: "4"
+  }
+];
+
+const ServicesContent = [
+  {
+    href: "/webdevelopment",
+    title: "Web Development",
+    id: "1"
+  },
+  {
+    href: "/webdesigning",
+    title: "Web Designing",
+    id: "2"
+  },
+  {
+    href: "/digitalmarketing",
+    title: "Digital Marketing",
+    id: "3"
+  },
+  {
+    href: "/seo",
+    title: "SEO",
+    id: "4"
+  }
+];
 const settings = ["Profile", "Dashboard", "Logout"];
 
 function Navbar() {
   const history = useNavigate();
-  const menuRef = React.useRef(null);
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElServices, setAnchorElServices] = React.useState(null);
   const [servicesOpen, setServicesOpen] = React.useState(false);
+  const [openDrawer, setOpenDrawer] = React.useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleToggleDrawer = () => {
+    setOpenDrawer(!openDrawer);
   };
 
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -66,38 +101,25 @@ function Navbar() {
   };
 
   const handleLogout = () => {
-    history('/login');
+    history("/login");
   };
 
   return (
     <>
       <AppBar className={styles.navbar}>
         <Container className={styles.navbarContainer}>
-          <Toolbar >
+          <Toolbar>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
-                onClick={handleOpenNavMenu}
+                onClick={handleToggleDrawer}
                 color="inherit"
               >
                 <MenuIcon />
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                keepMounted
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
             </Box>
 
-            <Box sx={{ mr: 2 }}>
+            <Box sx={{ mr: 2,flexGrow: 1 }}>
               <img
                 src={logo}
                 alt="Logo"
@@ -105,23 +127,21 @@ function Navbar() {
               />
             </Box>
 
+
             <Box
               sx={{
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
-                gap: "20px",
+                gap: "20px"
               }}
             >
-              <Typography variant="body1">
-                <Link to="/home" className={styles.navLink}>
-                  Home
-                </Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link to="/about" className={styles.navLink}>
-                  About
-                </Link>
-              </Typography>
+              {pages.map((page) => (
+                <Typography variant="body1" key={page.id}>
+                  <Link to={page.href} className={styles.navLink}>
+                    {page.title}
+                  </Link>
+                </Typography>
+              ))}
               <Typography
                 variant="body1"
                 className={styles.navLink}
@@ -134,97 +154,38 @@ function Navbar() {
               >
                 Services
               </Typography>
-              <Typography variant="body1">
-                <Link to="/client" className={styles.navLink}>
-                  Client Work
-                </Link>
-              </Typography>
-              <Typography variant="body1">
-                <Link to="/contact" className={styles.navLink}>
-                  Contact
-                </Link>
-              </Typography>
-
             </Box>
-            {/* <Popover
-              id="services-menu"
-              anchorEl={anchorElServices}
-              open={Boolean(anchorElServices)}
-              onClose={handleCloseServicesMenu}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'center',
-              }}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => {
-                setServicesOpen(false);
-                handleCloseServicesMenu();
-              }}
-              className={styles.popoverContainer}
-            >
-              <List sx={{ width: "600px",textAlign: "center",}}>
-                  <ListItem
-                    button
-                  onClick={() => handleServiceClick("Web Development")}
-                  >
-                  <ListItemText primary="Web Development"  className={styles.serviceText} />
-                  </ListItem>
-
-                <ListItem
-                  button
-                  onClick={() => handleServiceClick("Web Designing") }
-                >
-                  <ListItemText primary="Web Designing" className={styles.serviceText}/>
-                </ListItem>
-                <ListItem
-                  button
-                  onClick={() => handleServiceClick("Digital Marketing")}
-                >
-                  <ListItemText primary="Digital Marketing" className={styles.serviceText}/>
-                </ListItem>
-                <ListItem button onClick={() => handleServiceClick("SEO")}>
-                  <ListItemText primary="SEO" className={styles.serviceText}/>
-                </ListItem>
-              </List>
-            </Popover> */}
             <div
               onMouseLeave={handleCloseServicesMenu}
-              style={{ position: 'relative', zIndex: 1 }} 
+              style={{ position: "relative", zIndex: 1 }}
             >
               <Menu
-                ref={menuRef}
                 id="services-menu"
                 anchorEl={anchorElServices}
                 open={Boolean(anchorElServices)}
                 onClose={handleCloseServicesMenu}
                 MenuListProps={{
-                  'aria-labelledby': 'basic-button',
+                  "aria-labelledby": "basic-button"
                 }}
                 className={styles.PopoverContainer}
               >
-                {["Web Development", "Web Designing", "Digital Marketing", "SEO"].map(service => (
+                {ServicesContent.map((service) => (
                   <MenuItem
-                    key={service}
-                    onClick={() => handleServiceClick(service)}
-                    // sx={{  display: "block", margin: "auto" }}
+                    key={service.id}
+                    onClick={() => handleServiceClick(service.title)}
                   >
-                    <Typography className={styles.serviceText}>{service}</Typography>
+                    <Typography className={styles.serviceText}>
+                      {service.title}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </div>
 
-            <Box>
+            <Box sx={{ display: { xs: "none", md: "block" }, ml: "auto" }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar
-                    alt="User Avatar"
-                    src="/dynamic/path/to/user-avatar.jpg"
-                  />
+                  <Avatar alt="User Avatar" src={Avatar2} />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -235,7 +196,12 @@ function Navbar() {
                 onClose={handleCloseUserMenu}
               >
                 {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={setting === 'Logout' ? handleLogout : handleCloseUserMenu}>
+                  <MenuItem
+                    key={setting}
+                    onClick={
+                      setting === "Logout" ? handleLogout : handleCloseUserMenu
+                    }
+                  >
                     <Typography textAlign="center">{setting}</Typography>
                   </MenuItem>
                 ))}
@@ -244,6 +210,7 @@ function Navbar() {
           </Toolbar>
         </Container>
       </AppBar>
+      <DrawerNavigation open={openDrawer} onClose={handleToggleDrawer} />
     </>
   );
 }

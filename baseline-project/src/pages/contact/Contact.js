@@ -60,7 +60,7 @@ function Contact() {
             <Box className={style.rightContainer}>
 
               <form onSubmit={handleSubmit}>
-                <Typography variant="h3" className={style.formHeading}>Get In Touch With Us</Typography>
+                <Typography variant="h3"  sx={{fontWeight:700}} className={style.formHeading}>Get In Touch With Us</Typography>
                 <Box className={style.formGroup}>
                   <TextField
                     id="name"

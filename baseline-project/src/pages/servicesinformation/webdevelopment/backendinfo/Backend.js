@@ -1,6 +1,6 @@
 import React from 'react';
 import img from "../../../../assets/backend.png"
-import styles from "./style.module.css"
+import styles from "./backend.module.css"
 function Backend() {
   const backendTechnologies = [
     {

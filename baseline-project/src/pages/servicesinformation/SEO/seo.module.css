@@ -142,3 +142,53 @@ margin-top: 20px;
   font-size: 18px;
   font-weight: normal;
 }
+
+
+@media (max-width: 767px) {
+  .main {
+     padding: 0 15px;
+   }
+ 
+  .container {
+     flex-direction: column;
+   }
+ 
+  .containerHeading,.servicesContainer,.mainContainer,.contentContainer {
+    padding: 15px;
+    text-align: center;
+   }
+   .YellowText{
+    font-size: 20px;
+  }
+ 
+  .image {
+     width: 100%;
+   }
+ 
+  .shortCard {
+     width: 100%;
+   }
+   .buttonContainer{
+    text-align: center;
+   }
+   .servicesHeading{
+    margin-bottom: 10px;
+   }
+
+   .contentContainer{
+    margin-top: 0;
+    }
+
+    .contentHeading, .servicesHeading, .heading{
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .servicesSubHeading{
+      font-size: 19px;
+      font-weight: 600;
+    }
+   
+ }
+ 
+ 
+  

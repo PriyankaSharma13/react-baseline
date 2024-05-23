@@ -188,20 +188,50 @@
  
 }
 
-/* .socialIcons {
-  text-align: center;
-  padding-top: 20px;
-}
 
-.socialIcons i {
-  padding: 10px;
-  font-size: 30px;
-  color: #430ca5;
-  cursor: pointer;
-}
-
-.socialIcons i:hover {
-  color: black;
-} */
+@media (max-width: 768px) {
+  .main {
+     padding: 20px;
+   }
+ 
+  .container {
+     flex-direction: column;
+   }
+ 
+  .cardCategory5 {
+     width: 100%;
+   }
+ 
+  .perCard {
+     margin: 0 0 20px;
+   }
+ 
+  .servicesContainer {
+     padding: 0 20px;
+   }
+ 
+  .servicesHeading,.heading {
+     font-size: 24px;
+   }
+ 
+  .servicesSubHeading {
+     font-size: 16px;
+   }
+ 
+  .paragraph,.subHeading {
+     font-size: 14px;
+   }
+ 
+  .cardImage {
+     width: 100%;
+     position: relative;
+     right: 0;
+   }
+   .perName,   .cardText  {
+    font-size: 18px;
+    
+  }
+ }
+ 
 
 

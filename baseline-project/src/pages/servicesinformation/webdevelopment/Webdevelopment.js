@@ -6,10 +6,7 @@ import Backend from "./backendinfo/Backend";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import Footer from "../../../components/footer/footer";
-import { Skeleton } from "@mui/material";
 import SkeletonColor from "../../../common/Skeleton/Skeleton";
-
-
 
 const WebDevelopment = () => {
   const [loading, setLoading] = React.useState(true);
@@ -41,12 +38,6 @@ const WebDevelopment = () => {
                 Developing a website for your business is the first step in climbing the digital marketing ladder, and we are experts at giving your first step the recognition it deserves. As the best web development company in Mohali, we know what it takes to develop a creative, engaging, and user-friendly website. Founded in Mohali in 2012, we have a team of the best website developers in India who always go above and beyond to provide you with a future-proof website. Baseline IT Development has been rated as one of the best web development companies in India by various reputed online sources and review sites. We have a large pool of talented, experienced web developers who provide clients with nothing less than an award-winning website.
               </p>
             </div>
-
-            {/* Image */}
-            {/* <div className={styles.imageContainer} > */}
-              {/* <img src={img} alt="images" className={styles.image} /> */}
-
-
               <div className={styles.imageContainer} >
               {loading ? <SkeletonColor/> :<img
                 src={img}

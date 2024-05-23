@@ -10,8 +10,8 @@
   }
   
   .frontendHeading {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 42px;
+    font-weight: 700;
     color: #f1d625;
     text-align: center;
   }
@@ -94,3 +94,42 @@
     font-weight: normal;
   }
   
+
+  @media (max-width: 768px) {
+    .frontendContainer {
+       flex-direction: column;
+     }
+    
+    .leftContent,.rightContainer {
+       padding: 10px;
+     }
+   
+    .imageContainer {
+       margin-top: 10px;
+     }
+   
+    .rightContainer {
+       margin-top: 0;
+     }
+   
+    .cardContainer {
+       flex-direction: column;
+       align-items: stretch;
+     }
+   
+    .shortCard {
+       width: 100%;
+       border: none;
+       border-radius: 0;
+       box-shadow: none;
+       border: 2px solid #f1d625;
+     }
+     .frontendHeading{
+      font-size: 30px;
+      margin-bottom: 10px;
+     }
+     .frontendText{
+      font-size: 16px;
+        font-weight: 500;
+     }
+   }

@@ -41,7 +41,7 @@ const WebDesigning = () => {
                         <img src={webdesign} className={styles.image} alt="Web Design" />
                     </div>
 
-                    {/* <div className={styles.mainReview}> */}
+                  
                     <div className={styles.containerReview}>
                         <div className={styles.reviewContent}>
                             {review.map((item, index) => (
@@ -52,7 +52,7 @@ const WebDesigning = () => {
                             ))}
                         </div>
                     </div>
-                    {/* </div> */}
+                    
 
 
 

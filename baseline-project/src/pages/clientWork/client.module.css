@@ -1,135 +1,132 @@
 .main {
-    margin: 0 auto;
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .containerHeading {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
 .heading {
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    font-size: 2.5rem;
-    color: #f1d625;
-    margin-bottom: 20px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  font-size: 2.5rem;
+  color: #f1d625;
+  margin-bottom: 20px;
 }
 
 .whiteText {
-    color: #fff;
+  color: #fff;
 }
 
 .cardContainer {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
 }
-
 
 .readMore {
-    color: yellow;
+  color: yellow;
 }
 
-
-
 .quoteFrame {
-   position: relative;
-   width: 350px;
-   height: 275px;
-   border: 2px solid transparent;
-   padding: 20px;
-   cursor: pointer;
-   transition: transform 0.3s ease;
-   background-color: #1e1e1e;
-   border-radius: 10px;
-   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-   transform: rotate(45deg);
-   margin-bottom: 90px;
-   margin-top: 80px;
+  position: relative;
+  width: 350px;
+  height: 275px;
+  border: 2px solid transparent;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(45deg);
+  margin-bottom: 90px;
+  margin-top: 80px;
 }
 
 .quoteFrame::before,
 .quoteFrame::after {
-    content: "";
-    height: 260px;
-    position: absolute;
-    top: 0px;
-    left: -25px;
-    right: 20px;
-    bottom: 0;
-    border: 2px solid rgb(255, 215, 97);
-    pointer-events: none;
-    transform: rotate(45deg);
+  content: "";
+  height: 260px;
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  right: 20px;
+  bottom: 0;
+  border: 2px solid rgb(255, 215, 97);
+  pointer-events: none;
+  transform: rotate(45deg);
 }
 
 .quoteFrame:hover {
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgb(255, 215, 97) 95%
-    );
-    border: 2px solid rgb(255, 215, 97);
-    color: white;
-
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(255, 215, 97) 95%
+  );
+  border: 2px solid rgb(255, 215, 97);
+  color: white;
 }
 .quoteFrame:hover .readMore {
-    color: black !important; 
-    font-weight: 700;
+  color: black !important;
+  font-weight: 700;
 }
 .quoteText {
-    font-size: 16px;
-    color: #fff;
-    position: absolute;
-    top: 38%;
-    left: 36%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 38%;
+  left: 36%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .quoteWrapper {
-    position: relative;
+  position: relative;
 }
 
 .authorInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .quoteAuthor {
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 600;
-    color: #fff;
-    position: absolute;
-    bottom: 120px;
-    left: 81%;
-    transform: translateX(-50%) rotate(-45deg);
-    white-space: nowrap;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  bottom: 120px;
+  left: 81%;
+  transform: translateX(-50%) rotate(-45deg);
+  white-space: nowrap;
 }
 
-
 .avatar {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 10px;
-    left: 58%; 
-    transform: translateX(-50%) rotate(-45deg); 
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 58%;
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 .quoteText.expanded {
-    min-height: 150px; 
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; 
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+  min-height: 150px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .quoteText.expanded .readMore {
-    display: none; 
+  display: none;
 }
+
+

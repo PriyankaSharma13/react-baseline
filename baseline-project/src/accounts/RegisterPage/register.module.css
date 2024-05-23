@@ -63,3 +63,52 @@
   max-width: 100%;
   height: auto;
 }
+/* ------------Responsive styles ----------- */
+
+@media (max-width: 768px) {
+  .mainContainer {
+      flex-direction: column;
+    }
+  
+  .container {
+      padding: 20px;
+    }
+  
+  .content {
+      flex-direction: column;
+    }
+  
+  .imageContainer {
+      order: 1;
+    }
+  
+  .formContainer {
+      order: 2;
+    }
+  
+  .header {
+      text-align: center;
+    }
+  
+  .title {
+      font-size: 22px;
+    }
+  
+  .link {
+      font-size: 14px;
+    }
+  
+  .formContainer {
+      padding: 20px;
+    }
+  
+  .submitButton {
+      margin-top: 20px;
+    }
+  
+  .image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
