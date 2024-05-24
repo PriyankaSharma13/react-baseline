@@ -4,8 +4,9 @@ var nodemailer = require("nodemailer");
 
 exports.registerUser = async (req, res) => {
 
+
   try {
-    const { email, password, } = req.body;
+    const { email, password, firstName, phone } = req.body;
     console.log(req.body, "req");
     const saltRounds = 10;
 
@@ -33,15 +34,14 @@ exports.registerUser = async (req, res) => {
             .json({ message: "Internal Server Error during registration" });
         }
 
-        // Create a new user with the hashed password
         const newUser = new User({
-
           email,
           password: hashedPassword,
+          firstName,
+          phone
 
         });
 
-        // Save the new user to the database
         try {
           const result = await newUser.save();
           res.status(201).json({
@@ -65,49 +65,27 @@ exports.registerUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
-  try {
-    const { email, password } = req.body;
+    try {
+        const { email, password } = req.body;
+        if (!email.endsWith('@gmail.com')) {
+            return res.status(400).json({ message: "Only Gmail addresses are accepted." });
+        }
 
-    const existingUser = await User.findOne({ email });
-    console.log('existingUser: ', existingUser);
-    if (!existingUser) {
-      return res
-        .status(400)
-        .json({ message: "User is not existed Please register yourself" });
+        const existingUser = await User.findOne({ email });
+        if (!existingUser) {
+            return res.status(400).json({ message: "User is not registered. Please register yourself." });
+        }
+
+        const isValidPassword = await bcrypt.compare(password, existingUser.password);
+        if (!isValidPassword) {
+            return res.status(400).json({ message: "Invalid credentials." });
+        }
+
+        res.status(200).json(existingUser);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error during login." });
     }
-    const storedHashedPassword = existingUser.password;
-
-    bcrypt.compare(password, storedHashedPassword, (err, result) => {
-      if (err) {
-        // Handle error
-        console.error("Error comparing passwords:", err);
-        return res
-          .status(500)
-          .json({ message: "Internal Server Error during Login" });
-      }
-
-      if (result) {
-        // Passwords match, authentication successful
-        console.log("Passwords match! User authenticated.");
-        return res
-          .status(200)
-          .json({ message: "Passwords match! User authenticated." });
-      } else {
-        // Passwords don't match, authentication failed
-        console.log("Passwords do not match! Authentication failed.");
-        return res
-          .status(400)
-          .json({ message: "Passwords do not match! Authentication failed." });
-      }
-    });
-
-    // Generate salt
-  } catch (error) {
-    console.error(error);
-    res
-      .status(500)
-      .json({ message: "Internal Server Error during registration" });
-  }
 };
 
 exports.sendEmail = async (req, res) => {

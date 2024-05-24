@@ -16,14 +16,13 @@ const Register = () => {
     const formik = useFormik({
         initialValues: {
             firstName: '',
-            lastName: '',
+            // lastName: '',
             email: '',
             phone: '',
             password: '',
         },
         validationSchema: Yup.object().shape({
             firstName: Yup.string().required('First Name is required'),
-            lastName: Yup.string().required('Last Name is required'),
             email: Yup.string().required('Email Address is required').email('Invalid email format'),
             phone: Yup.string().required('Phone Number is required'),
             password: Yup.string()
@@ -38,11 +37,11 @@ const Register = () => {
             try {
                 await axios.post("http://localhost:4000/user/register", {
                     firstName: values.firstName,
-                    lastName: values.lastName,
                     email: values.email,
                     password: values.password,
                     phone: values.phone,
                 });
+                console.log(`Registered user's first name: ${values.firstName}`);
                 navigate('/login');
             } catch (error) {
                 console.error("Error during registration:", error);
@@ -73,15 +72,6 @@ const Register = () => {
                                     {...formik.getFieldProps('firstName')}
                                     error={formik.touched.firstName && Boolean(formik.errors.firstName)}
                                     helperText={formik.touched.firstName && formik.errors.firstName}
-                                />
-                                <TextField
-                                    margin="normal"
-                                    fullWidth
-                                    id="lastName"
-                                    label="Last Name"
-                                    {...formik.getFieldProps('lastName')}
-                                    error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-                                    helperText={formik.touched.lastName && formik.errors.lastName}
                                 />
                                 <TextField
                                     margin="normal"

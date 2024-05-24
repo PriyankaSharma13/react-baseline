@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../../components/footer/footer";
+import Footer from "../../../../components/footer/footer";
 import {
   Box,
   Card,
@@ -8,60 +8,62 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import reactLogo from "../../assets/react.png";
-import phplogo from "../../assets/php.png";
-import digitallogo from "../../assets/digital-marketing.png";
-import laravellogo from "../../assets/laravel-framework-logo.png";
-import cartlogo from "../../assets/shopping-bag.png";
-import weblogo from "../../assets/web-article.png";
+import reactLogo from "../../../../assets/react.png";
+import phplogo from "../../../../assets/php.png";
+import digitallogo from "../../../../assets/digital-marketing.png";
+import laravellogo from "../../../../assets/laravel-framework-logo.png";
+import cartlogo from "../../../../assets/shopping-bag.png";
+import weblogo from "../../../../assets/web-article.png";
 import styles from "./styles.module.css";
 
-function CardServices() {
-  const cardData = [
-    {
-      id: 1,
-      image: reactLogo,
-      heading: "React Js",
-      description:
-        "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
-    },
-    {
-      id: 2,
-      image: phplogo,
-      heading: "Php Developer",
-      description:
-        "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
-    },
-    {
-      id: 3,
-      image: digitallogo,
-      heading: "Digital Marketing",
-      description:
-        "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
-    },
-    {
-      id: 4,
-      image: cartlogo,
-      heading: "Big Commerce",
-      description:
-        "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
-    },
-    {
-      id: 5,
-      image: weblogo,
-      heading: "Web Designing",
-      description:
-        "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
-    },
-    {
-      id: 6,
-      image: laravellogo,
-      heading: "Laravel",
-      description:
-        "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
-    },
-  ];
 
+const cardData = [
+  {
+    id: 1,
+    image: reactLogo,
+    heading: "React Js",
+    description:
+      "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
+  },
+  {
+    id: 2,
+    image: phplogo,
+    heading: "Php Developer",
+    description:
+      "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
+  },
+  {
+    id: 3,
+    image: digitallogo,
+    heading: "Digital Marketing",
+    description:
+      "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
+  },
+  {
+    id: 4,
+    image: cartlogo,
+    heading: "Big Commerce",
+    description:
+      "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
+  },
+  {
+    id: 5,
+    image: weblogo,
+    heading: "Web Designing",
+    description:
+      "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
+  },
+  {
+    id: 6,
+    image: laravellogo,
+    heading: "Laravel",
+    description:
+      "The ReactJS Web and Mobile app development services we provide are best suited for startups and established enterprises.",
+  },
+];
+
+const CardServices = () =>{
+ 
   return (
     <>
       <Container>

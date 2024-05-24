@@ -7,7 +7,8 @@ const OurServices = () => {
     return (
         <>
             <Box sx={{ textAlign: 'center', position:"relative", zIndex:1, backgroundColor:"#141414" }}>
-                <Box className=" p-4 md:p-12" sx={{ boxShadow: '0px -4px 3px rgba(214, 214, 37, 0.75)',  borderTop: "0.1em solid rgb(241, 214, 37)", marginTop: 5}}>
+            <Box sx={{ px: 2, py: 4, boxShadow: '0px -4px 3px rgba(214, 214, 37, 0.75)', borderTop: "0.1em solid rgb(241, 214, 37)", marginTop: 5, padding: { xs: 2, sm: 4, md: 12 } }}>
+
                     <Container maxWidth="xl">
                         <Box className='banner'>
                             <Typography variant='h2' sx={{ color: "#fff", zIndex:999 }}>

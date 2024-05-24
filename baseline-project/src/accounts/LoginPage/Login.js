@@ -9,10 +9,13 @@ import styles from './login.module.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../../redux/slices/UserSlice';
 
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [error, setError] = useState(null);
 
   const formik = useFormik({
@@ -27,26 +30,24 @@ const Login = () => {
         .min(6, 'Password must be at least 6 characters'),
     }),
     onSubmit: async (values) => {
-      if (formik.errors.email) {
-        toast.error(formik.errors.email);
-        return;
-      }
       try {
         const response = await axios.post("http://localhost:4000/user/login", values);
         if (response.status === 200) {
-          navigate('/home');
+          dispatch(loginUser(response.data)).then(() => {
+            navigate('/home');
+          });
         } else {
           setError(response.data.message);
           toast.error(response.data.message);
         }
       } catch (error) {
+        const errorMsg = error.response?.data?.message || 'An error occurred during login';
         console.error('Login error:', error);
-        setError('An error occurred during login');
-        toast.error('An error occurred during login');
+        setError(errorMsg);
+        toast.error(errorMsg);
       }
     },
-  });
-
+  })
   return (
     <Box className={styles.mainContainer}>
        <ToastContainer />
@@ -108,7 +109,6 @@ const Login = () => {
                     Sign Up
                   </Link>
                 </Typography>
-
               </form>
             </Box>
           </Box>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -15,12 +15,20 @@ import styles from "./navbar.module.css";
 import Avatar2 from "../../assets/clientImg/avatar.png";
 import DrawerNavigation from "./drawer/drawer";
 import { Menu } from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from "react-redux";
 
 const pages = [
   {
     href: "/",
     title: "Home",
     id: "1"
+  },
+  {
+    href: "/about",
+    title: "About",
+    id: "2"
   },
   {
     href: "/client",
@@ -58,12 +66,17 @@ const ServicesContent = [
 ];
 const settings = ["Profile", "Dashboard", "Logout"];
 
-function Navbar() {
+
+
+const Navbar = () => {
   const history = useNavigate();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElServices, setAnchorElServices] = React.useState(null);
   const [servicesOpen, setServicesOpen] = React.useState(false);
   const [openDrawer, setOpenDrawer] = React.useState(false);
+  const user = useSelector((state) => state.user.user);
+ 
+  console.log('user: ', user);
 
   const handleToggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -119,7 +132,7 @@ function Navbar() {
               </IconButton>
             </Box>
 
-            <Box sx={{ mr: 2,flexGrow: 1 }}>
+            <Box sx={{ mr: 2, flexGrow: 1 }}>
               <img
                 src={logo}
                 alt="Logo"
@@ -182,6 +195,14 @@ function Navbar() {
               </Menu>
             </div>
 
+
+            <Box sx={{
+              display: { xs: "none", md: "block" }, ml: "auto", marginRight: "20px",
+              fontSize: "20px"
+            }}>
+              <FontAwesomeIcon icon={faMoon}  />
+            </Box>
+
             <Box sx={{ display: { xs: "none", md: "block" }, ml: "auto" }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -210,7 +231,8 @@ function Navbar() {
           </Toolbar>
         </Container>
       </AppBar>
-      <DrawerNavigation open={openDrawer} onClose={handleToggleDrawer} />
+      <DrawerNavigation open={openDrawer} onClose={handleToggleDrawer} userName={user?.firstName} />
+      {/* userName={user} */}
     </>
   );
 }

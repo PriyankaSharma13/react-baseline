@@ -118,6 +118,7 @@
   width: 100%;
   display: block;
   height: 350px;
+  object-fit: cover;
 }
 
 .cardOverlay {
