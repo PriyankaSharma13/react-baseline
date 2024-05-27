@@ -5,6 +5,7 @@ import OurServices from "../../pages/home/contents/ourservices/OurServices"
 import { Particle } from "../particle/Particle";
 
 function Banner() {
+  
   return (
     <>
       {/* ----------------------- */}

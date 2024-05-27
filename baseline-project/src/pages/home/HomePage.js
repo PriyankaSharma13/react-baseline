@@ -1,17 +1,18 @@
-// In HomePage.js
-import React from 'react';
-import Navbar from '../../common/navbar/Navbar';
+import React, { useState } from 'react';
+
 import Banner from '../../components/banner/Banner';
 import OurServices from '../../contents/ourservices/OurServices';
 import Footer from '../../components/footer/footer';
 
-const HomePage = () => (
-  <>
-    <Navbar />
-    <Banner />
-    <OurServices />
-    <Footer />
-  </>
-);
+const HomePage = () => {
+
+  return (
+    <>
+      <Banner />
+      <OurServices />
+      <Footer />
+    </>
+  );
+};
 
 export default HomePage;

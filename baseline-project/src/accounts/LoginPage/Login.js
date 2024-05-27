@@ -10,7 +10,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../../redux/slices/UserSlice';
+import { setData } from '../../redux/slices/UserSlice';
 
 
 const Login = () => {
@@ -33,9 +33,10 @@ const Login = () => {
       try {
         const response = await axios.post("http://localhost:4000/user/login", values);
         if (response.status === 200) {
-          dispatch(loginUser(response.data)).then(() => {
-            navigate('/home');
-          });
+          const { user } = response.data;
+          dispatch(setData(user));
+            navigate("/home");
+       
         } else {
           setError(response.data.message);
           toast.error(response.data.message);
@@ -47,10 +48,10 @@ const Login = () => {
         toast.error(errorMsg);
       }
     },
-  })
+  });
   return (
     <Box className={styles.mainContainer}>
-       <ToastContainer />
+      <ToastContainer />
       <Container component="main" maxWidth="md" className={styles.container}>
         <Box className={styles.content}>
           <Box className={styles.formContainer}>

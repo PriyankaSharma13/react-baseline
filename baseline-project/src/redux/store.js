@@ -6,11 +6,11 @@ import userReducer from "./slices/UserSlice";
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['user'], 
+  whitelist: ['user'],
 };
 
 const rootReducer = combineReducers({
-  user: userReducer, 
+  user: userReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -20,3 +20,6 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+
+

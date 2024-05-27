@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, createContext, useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,10 +18,20 @@ import WebDesigning from './pages/servicesinformation/webdesigning/webdesigning'
 import Digitalmarketing from './pages/servicesinformation/digitalMarketing/digitalmarketing';
 import SeoPage from './pages/servicesinformation/SEO/seo';
 import ClientWork from "./pages/clientWork/client";
+import Navbar from "./common/navbar/Navbar";
 
+ export const ThemeContext = createContext(null)
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  };
+
   return (
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
     <Router>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
@@ -37,6 +47,7 @@ const App = () => {
 
       </Routes>
     </Router>
+    </ThemeContext.Provider>
   );
 };
 
